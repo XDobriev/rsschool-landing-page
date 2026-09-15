@@ -1,12 +1,10 @@
 @use 'variables' as *;
+@use 'mixins' as *;
 
 .footer {
-  padding: 40px;
-
-  @media (max-width: $breakpoint-tablet - 1) {
-    padding: 16px;
-  }
+  @include edge-gutter;
 }
+
 
 .footer__inner {
   max-width: $container-max-width - ($gutter-desktop * 2);

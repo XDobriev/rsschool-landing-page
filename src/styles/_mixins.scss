@@ -1,0 +1,9 @@
+@use 'variables' as *;
+
+@mixin edge-gutter {
+  padding: $gutter-desktop;
+
+  @media (max-width: $breakpoint-tablet - 1) {
+    padding: $gutter-mobile;
+  }
+}
