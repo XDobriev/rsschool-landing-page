@@ -7,6 +7,87 @@
     <title>Coffee House</title>
   </head>
   <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="/" class="logo">Resource</a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#hero" class="nav__link">Favorite coffee</a>
+            </li>
+            <li class="nav__item">
+              <a href="#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="#app" class="nav__link">Mobile app</a>
+            </li>
+            <li class="nav__item">
+              <a href="#footer" class="nav__link">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <a href="catalog.html" class="menu-link">Menu</a>
+          <button type="button" class="theme-toggle" aria-label="Switch theme">
+            <span class="theme-toggle__icon theme-toggle__icon--light">☀</span>
+            <span class="theme-toggle__icon theme-toggle__icon--dark">☾</span>
+          </button>
+
+          <button type="button" class="burger" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__offer">
+        <p class="footer__slogan">
+          Sip, Savor, Smile.<br />
+          <em>It's coffee time!</em>
+        </p>
+
+        <ul class="socials">
+          <li>
+            <a href="https://twitter.com" class="socials__link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <!-- иконка -->
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="socials__link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <!-- иконка -->
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com" class="socials__link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <!-- иконка -->
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__contacts">
+        <h2 class="footer__title">Contact us</h2>
+
+        <ul class="contacts-list">
+          <li>
+            <a href="https://maps.google.com/?q=8558+Green+Rd" class="contacts-list__link" target="_blank" rel="noopener noreferrer">
+              8558 Green Rd., LA
+            </a>
+          </li>
+          <li>
+            <a href="tel:+16035550123" class="contacts-list__link">+1 (603) 555-0123</a>
+          </li>
+          <li class="contacts-list__item">Mon–Sat: 9:00–23:00</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>
