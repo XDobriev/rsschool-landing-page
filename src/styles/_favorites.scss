@@ -17,6 +17,7 @@
   position: relative;
   display: flex;
   justify-content: center;
+  padding-inline: 76px;
 }
 
 .slider__track {
@@ -37,8 +38,10 @@
 }
 
 .slider__image {
-  width: 200px;
-  height: 280px;
+  width: 480px;
+  max-width: 100%;
+  min-width: 0;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 16px;
 }
@@ -49,7 +52,7 @@
 }
 
 .slider__description {
-  max-width: 360px;
+  max-width: 480px;
   color: var(--color-text-primary);
   font-size: 0.9rem;
   line-height: 1.5;
@@ -64,9 +67,10 @@
 
 .slider__control {
   position: absolute;
-  top: 140px;
-  width: 44px;
-  height: 44px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: 1px solid var(--color-border-inverse);
   background: transparent;
