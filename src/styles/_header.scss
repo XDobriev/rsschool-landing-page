@@ -68,6 +68,9 @@
 }
 
 .menu-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font: 600 1rem/1.5 'Inter', sans-serif;
   color: var(--color-text-primary);
   text-decoration: none;
