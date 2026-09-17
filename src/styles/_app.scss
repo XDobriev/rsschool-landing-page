@@ -74,20 +74,6 @@
   display: block;
 }
 
-.app__image--dark {
-  display: none;
-}
-
-[data-theme='dark'] {
-  .app__image--light {
-    display: none;
-  }
-
-  .app__image--dark {
-    display: block;
-  }
-}
-
 @media (max-width: $breakpoint-tablet - 1) {
   .app__inner {
     flex-direction: column;
