@@ -1,0 +1,377 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <script>
+      if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    </script>
+    <link rel="icon" type="image/svg+xml" href="/rsschool-landing-page/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <title>Coffee House — Menu</title>
+    <script type="module" crossorigin src="/rsschool-landing-page/assets/theme-BiWKB4Ne.js"></script>
+    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/theme-CqOM7qPz.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container header__inner">
+        <a href="index.html" class="logo">
+          <img src="/rsschool-landing-page/assets/logo-light-DdWrtBBc.svg" alt="Resource Coffee House" class="logo__image logo__image--light" />
+          <img src="/rsschool-landing-page/assets/logo-dark-CPJ8mOVa.svg" alt="Resource Coffee House" class="logo__image logo__image--dark" />
+        </a>
+        <nav class="nav">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="index.html#favorites" class="nav__link">Favorite coffee</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#about" class="nav__link">About</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#app" class="nav__link">Mobile app</a>
+            </li>
+            <li class="nav__item">
+              <a href="index.html#footer" class="nav__link">Contact us</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="header__actions">
+          <div class="theme-toggle">
+            <button type="button" class="theme-toggle__btn" data-theme-value="light" aria-label="Light theme">
+              <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M17 10V8C17 7.45 17.45 7 18 7C18.55 7 19 7.45 19 8V10C19 10.55 18.55 11 18 11C17.45 11 17 10.55 17 10ZM24.36 13.05L25.77 11.63C26.16 11.24 26.16 10.61 25.77 10.22C25.38 9.83 24.75 9.83 24.36 10.22L22.95 11.64C22.56 12.03 22.56 12.66 22.95 13.05C23.34 13.44 23.97 13.44 24.36 13.05ZM28 17H26C25.45 17 25 17.45 25 18C25 18.55 25.45 19 26 19H28C28.55 19 29 18.55 29 18C29 17.45 28.55 17 28 17ZM18 25C17.45 25 17 25.45 17 26V28C17 28.55 17.45 29 18 29C18.55 29 19 28.55 19 28V26C19 25.45 18.55 25 18 25ZM11.64 13.05L10.22 11.64C9.83 11.25 9.83 10.61 10.22 10.23C10.61 9.85 11.25 9.84 11.63 10.23L13.04 11.64C13.43 12.03 13.43 12.67 13.04 13.05C12.65 13.43 12.02 13.44 11.64 13.05ZM22.95 22.95C22.56 23.34 22.56 23.98 22.95 24.36L24.36 25.77C24.75 26.16 25.39 26.16 25.77 25.77C26.16 25.38 26.16 24.74 25.77 24.36L24.36 22.95C23.98 22.56 23.34 22.56 22.95 22.95ZM8 19H10C10.55 19 11 18.55 11 18C11 17.45 10.55 17 10 17H8C7.45 17 7 17.45 7 18C7 18.55 7.45 19 8 19ZM11.64 25.78L13.05 24.37C13.44 23.98 13.44 23.34 13.05 22.96C12.66 22.58 12.02 22.57 11.64 22.96L10.23 24.37C9.84 24.76 9.84 25.4 10.23 25.78C10.61 26.17 11.25 26.17 11.64 25.78ZM18 12C14.69 12 12 14.69 12 18C12 21.31 14.69 24 18 24C21.31 24 24 21.31 24 18C24 14.69 21.31 12 18 12Z" fill="currentColor"/>
+              </svg>
+            </button>
+            <button type="button" class="theme-toggle__btn" data-theme-value="dark" aria-label="Dark theme">
+              <svg class="theme-toggle__icon" width="18" height="18" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M18 9C13.03 9 9 13.03 9 18C9 22.97 13.03 27 18 27C22.97 27 27 22.97 27 18C27 17.54 26.96 17.08 26.9 16.64C25.92 18.01 24.32 18.9 22.5 18.9C19.52 18.9 17.1 16.48 17.1 13.5C17.1 11.69 17.99 10.08 19.36 9.1C18.92 9.04 18.46 9 18 9Z" fill="currentColor"/>
+              </svg>
+            </button>
+          </div>
+
+          <a href="catalog.html" class="menu-link">
+            Menu
+            <svg class="menu-link__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M14.1667 9.76667V11.6667C14.1667 14.8883 11.555 17.5 8.33333 17.5C5.11167 17.5 2.5 14.8883 2.5 11.6667V9.76667C2.5 9.4353 2.76863 9.16667 3.1 9.16667H13.5667C13.898 9.16667 14.1667 9.4353 14.1667 9.76667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 7.5C10 6.66667 10.5952 5.83333 11.7857 5.83333C13.1007 5.83333 14.1667 4.76734 14.1667 3.45238V2.91667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6.66667 7.5V7.08333C6.66667 5.70262 7.78595 4.58333 9.16667 4.58333C10.0871 4.58333 10.8333 3.83714 10.8333 2.91667V2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.3333 9.16667H15.4167C16.5673 9.16667 17.5 10.0994 17.5 11.25C17.5 12.4006 16.5673 13.3333 15.4167 13.3333H14.1667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
+
+          <button type="button" class="burger" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="catalog" id="catalog">
+        <div class="container">
+          <h1 class="catalog__title">Behind each of our cups hides an <em>amazing surprise</em></h1>
+
+          <ul class="tabs">
+            <li>
+              <button type="button" class="tab tab--active" data-category="coffee">
+                <span class="tab__icon" aria-hidden="true">☕</span>
+                Coffee
+              </button>
+            </li>
+            <li>
+              <button type="button" class="tab" data-category="tea">
+                <span class="tab__icon" aria-hidden="true">🫖</span>
+                Tea
+              </button>
+            </li>
+            <li>
+              <button type="button" class="tab" data-category="dessert">
+                <span class="tab__icon" aria-hidden="true">🍰</span>
+                Dessert
+              </button>
+            </li>
+          </ul>
+
+          <ul class="catalog__grid" data-category-grid="coffee">
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/coffee-1-DtocWwCr.jpg" alt="Irish coffee" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Irish coffee</h2>
+                  <p class="card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
+                </div>
+                <p class="card__price">$7.00</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/coffee-2-Dt9rSVFt.jpg" alt="Kahlua coffee" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Kahlua coffee</h2>
+                  <p class="card__description">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
+                </div>
+                <p class="card__price">$7.00</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/coffee-3-ZC_K2sEo.jpg" alt="Honey raf" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Honey raf</h2>
+                  <p class="card__description">Espresso with frothed milk, cream and aromatic honey</p>
+                </div>
+                <p class="card__price">$5.50</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/coffee-4-Bzna4dex.jpg" alt="Ice cappuccino" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Ice cappuccino</h2>
+                  <p class="card__description">Cappuccino with soft thick foam in summer version with ice</p>
+                </div>
+                <p class="card__price">$5.00</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/coffee-5-D_bWq0oU.jpg" alt="Espresso" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Espresso</h2>
+                  <p class="card__description">Classic black coffee</p>
+                </div>
+                <p class="card__price">$4.50</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/coffee-6-Db3J8o1W.jpg" alt="Latte" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Latte</h2>
+                  <p class="card__description">Espresso coffee with the addition of steamed milk and dense milk foam</p>
+                </div>
+                <p class="card__price">$5.50</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/coffee-7-BtdA6G5u.jpg" alt="Latte macchiato" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Latte macchiato</h2>
+                  <p class="card__description">Espresso with frothed milk and chocolate</p>
+                </div>
+                <p class="card__price">$5.50</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/coffee-8-CBqyok9b.jpg" alt="Coffee with cognac" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Coffee with cognac</h2>
+                  <p class="card__description">Fragrant black coffee with cognac and whipped cream</p>
+                </div>
+                <p class="card__price">$6.50</p>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="catalog__grid" data-category-grid="tea" hidden>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/tea-1-C9WavPt7.jpg" alt="Moroccan" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Moroccan</h2>
+                  <p class="card__description">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
+                </div>
+                <p class="card__price">$4.50</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/tea-2-lQdxdRVp.jpg" alt="Ginger" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Ginger</h2>
+                  <p class="card__description">Original black tea with fresh ginger, lemon and honey</p>
+                </div>
+                <p class="card__price">$5.00</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/tea-3-C1Tt3Exe.jpg" alt="Cranberry" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Cranberry</h2>
+                  <p class="card__description">Invigorating black tea with cranberry and honey</p>
+                </div>
+                <p class="card__price">$5.00</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/tea-4-Cp3gag2R.jpg" alt="Sea buckthorn" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Sea buckthorn</h2>
+                  <p class="card__description">Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
+                </div>
+                <p class="card__price">$5.50</p>
+              </div>
+            </li>
+          </ul>
+
+          <ul class="catalog__grid" data-category-grid="dessert" hidden>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/dessert-1-CV_6nnuY.jpg" alt="Marble cheesecake" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Marble cheesecake</h2>
+                  <p class="card__description">Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
+                </div>
+                <p class="card__price">$3.50</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/dessert-2-DftBBdhD.jpg" alt="Red velvet" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Red velvet</h2>
+                  <p class="card__description">Layer cake with cream cheese frosting</p>
+                </div>
+                <p class="card__price">$4.00</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/dessert-3-CjSF78ON.jpg" alt="Cheesecakes" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Cheesecakes</h2>
+                  <p class="card__description">Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
+                </div>
+                <p class="card__price">$4.50</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/dessert-4-GZfXWO4N.jpg" alt="Creme brulee" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Creme brulee</h2>
+                  <p class="card__description">Delicate creamy dessert in a caramel basket with wild berries</p>
+                </div>
+                <p class="card__price">$4.00</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/dessert-5-_YIX83q-.jpg" alt="Pancakes" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Pancakes</h2>
+                  <p class="card__description">Tender pancakes with strawberry jam and fresh strawberries</p>
+                </div>
+                <p class="card__price">$4.50</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/dessert-6-B6CmLSdW.jpg" alt="Honey cake" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Honey cake</h2>
+                  <p class="card__description">Classic honey cake with delicate custard</p>
+                </div>
+                <p class="card__price">$4.50</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/dessert-7-B2GsMFd2.jpg" alt="Chocolate cake" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Chocolate cake</h2>
+                  <p class="card__description">Cake with hot chocolate filling and nuts with dried apricots</p>
+                </div>
+                <p class="card__price">$5.50</p>
+              </div>
+            </li>
+            <li class="card">
+              <img src="/rsschool-landing-page/assets/dessert-8-B_6Kj9Ar.jpg" alt="Black forest" class="card__image" />
+              <div class="card__body">
+                <div class="card__info">
+                  <h2 class="card__title">Black forest</h2>
+                  <p class="card__description">A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
+                </div>
+                <p class="card__price">$6.50</p>
+              </div>
+            </li>
+          </ul>
+
+          <button type="button" class="catalog__more" aria-label="Show more">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M17 10a7 7 0 1 1-2.05-4.95" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
+              <path d="M17 3v4h-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="footer">
+    <div class="footer__inner">
+      <div class="footer__offer">
+        <p class="footer__slogan">
+          Sip, Savor, Smile.<br />
+          <em>It's coffee time!</em>
+        </p>
+
+        <ul class="socials">
+          <li>
+            <a href="https://twitter.com" class="socials__link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+              <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M23%203.01006C23%203.01006%2020.9821%204.20217%2019.86%204.54006C19.2577%203.84757%2018.4573%203.35675%2017.567%203.13398C16.6767%202.91122%2015.7395%202.96725%2014.8821%203.29451C14.0247%203.62177%2013.2884%204.20446%2012.773%204.96377C12.2575%205.72309%2011.9877%206.62239%2012%207.54006V8.54006C10.2426%208.58562%208.50127%208.19587%206.93101%207.4055C5.36074%206.61513%204.01032%205.44869%203%204.01006C3%204.01006%20-1%2013.0101%208%2017.0101C5.94053%2018.408%203.48716%2019.109%201%2019.0101C10%2024.0101%2021%2019.0101%2021%207.51006C20.9991%207.23151%2020.9723%206.95365%2020.92%206.68006C21.9406%205.67355%2023%203.01006%2023%203.01006Z'%20stroke='%23E1D4C9'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="" width="24" height="24" />
+            </a>
+          </li>
+          <li>
+            <a href="https://instagram.com" class="socials__link" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M12%2016C14.2091%2016%2016%2014.2091%2016%2012C16%209.79086%2014.2091%208%2012%208C9.79086%208%208%209.79086%208%2012C8%2014.2091%209.79086%2016%2012%2016Z'%20stroke='%23E1D4C9'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M3%2016V8C3%205.23858%205.23858%203%208%203H16C18.7614%203%2021%205.23858%2021%208V16C21%2018.7614%2018.7614%2021%2016%2021H8C5.23858%2021%203%2018.7614%203%2016Z'%20stroke='%23E1D4C9'/%3e%3cpath%20d='M17.5%206.51L17.51%206.49889'%20stroke='%23E1D4C9'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="" width="24" height="24" />
+            </a>
+          </li>
+          <li>
+            <a href="https://facebook.com" class="socials__link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <img src="data:image/svg+xml,%3csvg%20width='24'%20height='24'%20viewBox='0%200%2024%2024'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M17%202H14C12.6739%202%2011.4021%202.52678%2010.4645%203.46447C9.52678%204.40215%209%205.67392%209%207V10H6V14H9V22H13V14H16L17%2010H13V7C13%206.73478%2013.1054%206.48043%2013.2929%206.29289C13.4804%206.10536%2013.7348%206%2014%206H17V2Z'%20stroke='%23E1D4C9'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="" width="24" height="24" />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="footer__contacts">
+        <h2 class="footer__title">Contact us</h2>
+
+        <ul class="contacts-list">
+          <li>
+            <a href="https://maps.google.com/?q=8558+Green+Rd" class="contacts-list__link" target="_blank" rel="noopener noreferrer">
+              <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M16.6667%208.33333C16.6667%2012.0152%2010%2018.3333%2010%2018.3333C10%2018.3333%203.33333%2012.0152%203.33333%208.33333C3.33333%204.65143%206.3181%201.66667%2010%201.66667C13.6819%201.66667%2016.6667%204.65143%2016.6667%208.33333Z'%20stroke='%23E1D4C9'%20stroke-width='1.5'/%3e%3cpath%20d='M10%209.16667C10.4602%209.16667%2010.8333%208.79357%2010.8333%208.33333C10.8333%207.8731%2010.4602%207.5%2010%207.5C9.53976%207.5%209.16667%207.8731%209.16667%208.33333C9.16667%208.79357%209.53976%209.16667%2010%209.16667Z'%20fill='%23E1D4C9'%20stroke='%23E1D4C9'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="" class="contacts-list__icon" />
+              8558 Green Rd., LA
+            </a>
+          </li>
+          <li>
+            <a href="tel:+16035550123" class="contacts-list__link">
+              <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M15.0985%2012.2517L11.6667%2012.9167C9.34857%2011.7532%207.91667%2010.4167%207.08333%208.33333L7.72496%204.89158L6.5121%201.66667L3.72959%201.66667C2.60204%201.66667%201.71479%202.59962%201.90121%203.71165C2.299%206.08458%203.37244%2010.0391%206.25%2012.9167C9.27351%2015.9402%2013.5663%2017.3318%2016.1379%2017.9288C17.2991%2018.1984%2018.3333%2017.2908%2018.3333%2016.0988L18.3333%2013.4844L15.0985%2012.2517Z'%20stroke='%23E1D4C9'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="" class="contacts-list__icon" />
+              +1 (603) 555-0123
+            </a>
+          </li>
+          <li class="contacts-list__item">
+            <img src="data:image/svg+xml,%3csvg%20width='20'%20height='20'%20viewBox='0%200%2020%2020'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M10%205L10%2010L15%2010'%20stroke='%23E1D4C9'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3cpath%20d='M10%2018.3333C14.6024%2018.3333%2018.3333%2014.6024%2018.3333%2010C18.3333%205.39763%2014.6024%201.66667%2010%201.66667C5.39763%201.66667%201.66667%205.39763%201.66667%2010C1.66667%2014.6024%205.39763%2018.3333%2010%2018.3333Z'%20stroke='%23E1D4C9'%20stroke-width='1.5'%20stroke-linecap='round'%20stroke-linejoin='round'/%3e%3c/svg%3e" alt="" class="contacts-list__icon" />
+            Mon–Sat: 9:00–23:00
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  </body>
+</html>
