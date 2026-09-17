@@ -12,10 +12,27 @@
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-text-primary);
-  text-decoration: none;
+  display: block;
+}
+
+.logo__image {
+  height: 40px;
+  width: auto;
+  display: block;
+}
+
+.logo__image--dark {
+  display: none;
+}
+
+[data-theme='dark'] {
+  .logo__image--light {
+    display: none;
+  }
+
+  .logo__image--dark {
+    display: block;
+  }
 }
 
 .nav {
