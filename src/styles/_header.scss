@@ -50,14 +50,30 @@
 }
 
 .nav__link {
+  position: relative;
   font: 600 1rem/1.5 'Inter', sans-serif;
   color: var(--color-text-primary);
   text-decoration: none;
   white-space: nowrap;
   transition: color 0.2s ease;
 
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.2s ease;
+  }
+
   &:hover {
     color: var(--color-text-accent);
+
+    &::after {
+      width: 100%;
+    }
   }
 }
 
@@ -68,6 +84,7 @@
 }
 
 .menu-link {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 8px;
@@ -76,8 +93,23 @@
   text-decoration: none;
   transition: color 0.2s ease;
 
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.2s ease;
+  }
+
   &:hover {
     color: var(--color-text-accent);
+
+    &::after {
+      width: 100%;
+    }
   }
 }
 
