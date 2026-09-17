@@ -54,6 +54,31 @@
 
 .app__icon {
   flex-shrink: 0;
+  display: block;
+}
+
+.app__icon--store {
+  width: 20px;
+  height: 24px;
+}
+
+.app__icon--play {
+  width: 20px;
+  height: 22px;
+}
+
+.app__icon--dark {
+  display: none;
+}
+
+[data-theme='dark'] {
+  .app__icon--light {
+    display: none;
+  }
+
+  .app__icon--dark {
+    display: block;
+  }
 }
 
 .app__button-text {
