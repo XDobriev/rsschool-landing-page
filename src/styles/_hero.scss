@@ -1,0 +1,61 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.hero {
+  @include edge-gutter;
+}
+
+.hero__inner {
+  max-width: $container-max-width - ($gutter-desktop * 2);
+  margin-inline: auto;
+  min-height: 644px;
+  border-radius: 32px;
+  overflow: hidden;
+  background:
+    linear-gradient(90deg, rgba(41, 40, 38, 0.8) 0%, rgba(41, 40, 38, 0.4) 45%, rgba(41, 40, 38, 0) 70%),
+    url('../assets/hero.jpg') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 64px;
+  gap: 24px;
+}
+
+.hero__title {
+  font: 600 3.75rem/1.25 'Inter', sans-serif;
+  color: var(--color-text-inverse);
+  margin: 0;
+  max-width: 600px;
+
+  em {
+    font-style: italic;
+    color: var(--color-text-accent);
+  }
+}
+
+.hero__text {
+  color: var(--color-text-inverse);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 0;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 999px;
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font: 600 1rem/1.5 'Inter', sans-serif;
+  text-decoration: none;
+  width: fit-content;
+  transition: background-color 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-text-accent);
+    color: var(--color-text-inverse);
+  }
+}

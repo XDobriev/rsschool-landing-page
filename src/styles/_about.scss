@@ -1,0 +1,50 @@
+@use 'variables' as *;
+
+.about {
+  padding-block: 80px;
+}
+
+.about__title {
+  font: 600 2rem/1.4 'Inter', sans-serif;
+  max-width: 800px;
+  margin: 0 0 48px;
+
+  em {
+    font-style: italic;
+    color: var(--color-text-accent);
+  }
+}
+
+.about__images {
+  display: flex;
+  gap: 24px;
+}
+
+.about__column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex: 1;
+}
+
+.about__image {
+  flex: 2;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+    display: block;
+  }
+}
+
+.about__image--tall {
+  flex: 3;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .about__images {
+    flex-direction: column;
+  }
+}

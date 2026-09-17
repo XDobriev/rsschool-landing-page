@@ -1,0 +1,34 @@
+// breakpoints
+$breakpoint-tablet: 768px;
+$breakpoint-mobile: 380px;
+
+// gutters
+$gutter-desktop: 40px;
+$gutter-mobile: 16px;
+$container-max-width: 1440px;
+
+:root {
+  --color-text-primary: #403f3d;
+  --color-text-inverse: #e1d4c9;
+  --color-text-accent: #b0907a;
+
+  --color-bg-page: #e1d4c9;
+  --color-bg-container: #665f55;
+  --color-bg-overlay: #403f3d;
+
+  --color-border-primary: #c1b6ad;
+  --color-border-inverse: #665f55;
+}
+
+[data-theme='dark'] {
+  --color-text-primary: #e1d4c9;
+  --color-text-inverse: #e1d4c9;
+  --color-text-accent: #b0907a;
+
+  --color-bg-page: #292826;
+  --color-bg-container: #403f3d;
+  --color-bg-overlay: #292826cc;
+
+  --color-border-primary: #665f55;
+  --color-border-inverse: #c1b6ad;
+}
