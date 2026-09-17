@@ -3,7 +3,7 @@
 @mixin edge-gutter {
   padding: $gutter-desktop;
 
-  @media (max-width: $breakpoint-tablet - 1) {
+  @media (max-width: $breakpoint-tablet) {
     padding: $gutter-mobile;
   }
 }

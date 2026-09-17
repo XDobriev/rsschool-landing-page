@@ -99,7 +99,7 @@
   display: block;
 }
 
-@media (max-width: $breakpoint-tablet - 1) {
+@media (max-width: $breakpoint-tablet) {
   .app__inner {
     flex-direction: column;
     text-align: center;

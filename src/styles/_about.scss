@@ -43,7 +43,7 @@
   flex: 3;
 }
 
-@media (max-width: $breakpoint-tablet - 1) {
+@media (max-width: $breakpoint-tablet) {
   .about__images {
     flex-direction: column;
   }
