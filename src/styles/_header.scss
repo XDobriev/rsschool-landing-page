@@ -37,6 +37,7 @@
 
 .nav {
   flex: 1;
+  position: relative;
   display: flex;
   justify-content: center;
 }
@@ -84,7 +85,10 @@
 }
 
 .menu-link {
-  position: relative;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -167,7 +171,11 @@
 }
 
 @media (max-width: $breakpoint-tablet) {
-  .nav {
+  .nav__list {
+    display: none;
+  }
+
+  .menu-link {
     display: none;
   }
 
