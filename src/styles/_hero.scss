@@ -56,6 +56,22 @@
 
   &:hover {
     background-color: var(--color-text-accent);
-    color: var(--color-text-inverse);
+    color: var(--color-btn-hover-text);
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .hero__inner {
+    min-height: 480px;
+    padding: 32px;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+    max-width: none;
+  }
+
+  .hero__text {
+    max-width: none;
   }
 }

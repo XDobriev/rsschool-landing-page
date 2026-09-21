@@ -1,3 +1,5 @@
+@use 'variables' as *;
+
 .favorites {
   padding-block: 80px;
   text-align: center;
@@ -106,5 +108,16 @@
 
   &--active {
     background-color: var(--color-border-inverse);
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .slider {
+    padding-inline: 44px;
+  }
+
+  .slider__control {
+    width: 40px;
+    height: 40px;
   }
 }
