@@ -140,11 +140,19 @@
   transition:
     background-color 0.2s ease,
     color 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-border-primary);
+  }
 }
 
 .theme-toggle__btn--active {
   background: var(--color-text-accent);
   color: var(--color-text-inverse);
+
+  &:hover {
+    background-color: var(--color-text-accent);
+  }
 }
 
 .theme-toggle__icon {
