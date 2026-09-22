@@ -121,3 +121,10 @@
     height: 40px;
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .favorites__title {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+}

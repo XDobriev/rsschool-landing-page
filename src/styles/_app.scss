@@ -114,3 +114,9 @@
     justify-content: center;
   }
 }
+
+@media (max-width: $breakpoint-mobile) {
+  .app__title {
+    font-size: 2rem;
+  }
+}
