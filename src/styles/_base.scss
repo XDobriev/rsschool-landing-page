@@ -24,7 +24,7 @@ body {
   margin-inline: auto;
   padding-inline: $gutter-desktop;
 
-  @media (max-width: $breakpoint-tablet) {
+  @media (max-width: $breakpoint-small) {
     padding-inline: $gutter-mobile;
   }
 }
