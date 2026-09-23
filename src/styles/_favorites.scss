@@ -17,26 +17,28 @@
 
 .slider {
   position: relative;
-  display: flex;
-  justify-content: center;
-  padding-inline: 76px;
+}
+
+.slider__viewport {
+  overflow: hidden;
+  margin-inline: 76px;
 }
 
 .slider__track {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  transition: transform 0.5s ease;
 }
 
 .slider__slide {
+  flex: 0 0 100%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-}
-
-.slider__slide[hidden] {
-  display: none;
 }
 
 .slider__image {
@@ -103,8 +105,12 @@
 .slider__dot {
   width: 40px;
   height: 4px;
+  padding: 0;
+  border: none;
   border-radius: 2px;
   background-color: var(--color-border-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 
   &--active {
     background-color: var(--color-border-inverse);
@@ -112,8 +118,8 @@
 }
 
 @media (max-width: $breakpoint-tablet) {
-  .slider {
-    padding-inline: 44px;
+  .slider__viewport {
+    margin-inline: 44px;
   }
 
   .slider__control {
@@ -128,11 +134,12 @@
     margin-bottom: 32px;
   }
 
-  .slider {
-    padding-inline: 0;
+  // there is no room for the controls beside the slide, so they sit on the image
+  .slider__viewport {
+    margin-inline: 0;
   }
 
   .slider__control {
-    display: none;
+    background-color: var(--color-bg-page);
   }
 }

@@ -37,6 +37,9 @@
             <li class="nav__item">
               <a href="#footer" class="nav__link">Contact us</a>
             </li>
+            <li class="nav__item nav__item--mobile">
+              <a href="catalog.html" class="nav__link">Menu</a>
+            </li>
           </ul>
         </nav>
 
@@ -92,45 +95,47 @@
           <div class="slider">
             <button type="button" class="slider__control slider__control--prev" aria-label="Previous slide">‹</button>
 
-            <ul class="slider__track">
-              <li class="slider__slide">
-                <img src="/src/assets/coffee-slider-1.png" alt="S'mores Frappuccino" class="slider__image">
-                <h3 class="slider__name">S'mores Frappuccino</h3>
-                <p class="slider__description">
-                  This new drink takes an espresso and mixes it with brown sugar
-                  and cinnamon before being topped with oat milk.
-                </p>
-                <p class="slider__price">$5.50</p>
-              </li>
+            <div class="slider__viewport">
+              <ul class="slider__track">
+                <li class="slider__slide">
+                  <img src="/src/assets/coffee-slider-1.png" alt="S'mores Frappuccino" class="slider__image">
+                  <h3 class="slider__name">S'mores Frappuccino</h3>
+                  <p class="slider__description">
+                    This new drink takes an espresso and mixes it with brown sugar
+                    and cinnamon before being topped with oat milk.
+                  </p>
+                  <p class="slider__price">$5.50</p>
+                </li>
 
-              <li class="slider__slide" hidden>
-                <img src="/src/assets/coffee-slider-2.png" alt="Caramel Macchiato" class="slider__image">
-                <h3 class="slider__name">Caramel Macchiato</h3>
-                <p class="slider__description">
-                  Fragrant and unique classic espresso with rich caramel-peanut
-                  syrup, with cream under whipped thick foam.
-                </p>
-                <p class="slider__price">$5.00</p>
-              </li>
+                <li class="slider__slide">
+                  <img src="/src/assets/coffee-slider-2.png" alt="Caramel Macchiato" class="slider__image">
+                  <h3 class="slider__name">Caramel Macchiato</h3>
+                  <p class="slider__description">
+                    Fragrant and unique classic espresso with rich caramel-peanut
+                    syrup, with cream under whipped thick foam.
+                  </p>
+                  <p class="slider__price">$5.00</p>
+                </li>
 
-              <li class="slider__slide" hidden>
-                <img src="/src/assets/coffee-slider-3.png" alt="Ice coffee" class="slider__image">
-                <h3 class="slider__name">Ice coffee</h3>
-                <p class="slider__description">
-                  A popular summer drink that tones and invigorates. Prepared
-                  from coffee, milk and ice.
-                </p>
-                <p class="slider__price">$4.50</p>
-              </li>
-            </ul>
+                <li class="slider__slide">
+                  <img src="/src/assets/coffee-slider-3.png" alt="Ice coffee" class="slider__image">
+                  <h3 class="slider__name">Ice coffee</h3>
+                  <p class="slider__description">
+                    A popular summer drink that tones and invigorates. Prepared
+                    from coffee, milk and ice.
+                  </p>
+                  <p class="slider__price">$4.50</p>
+                </li>
+              </ul>
+            </div>
 
             <button type="button" class="slider__control slider__control--next" aria-label="Next slide">›</button>
           </div>
 
           <div class="slider__dots">
-            <span class="slider__dot slider__dot--active"></span>
-            <span class="slider__dot"></span>
-            <span class="slider__dot"></span>
+            <button type="button" class="slider__dot slider__dot--active" aria-label="Go to slide 1"></button>
+            <button type="button" class="slider__dot" aria-label="Go to slide 2"></button>
+            <button type="button" class="slider__dot" aria-label="Go to slide 3"></button>
           </div>
         </div>
       </section>
