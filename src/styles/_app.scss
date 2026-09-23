@@ -8,11 +8,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 48px;
+  gap: 100px;
 }
 
 .app__offer {
-  max-width: 480px;
+  max-width: 630px;
 }
 
 .app__title {
@@ -94,7 +94,7 @@
 }
 
 .app__image {
-  width: 420px;
+  width: 630px;
   max-width: 100%;
   height: auto;
   min-width: 0;

@@ -12,13 +12,18 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 40px;
+  gap: 100px;
 
   background-color: var(--color-bg-container);
   color: var(--color-text-inverse);
   border-radius: 32px;
-  padding: 64px 80px;
+  padding: 100px;
   --color-text-accent: #e8bd8e;
+}
+
+.footer__offer,
+.footer__contacts {
+  flex: 1;
 }
 
 .footer__slogan {

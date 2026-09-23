@@ -28,7 +28,7 @@
 }
 
 .about__image {
-  flex: 2;
+  flex: 430;
 
   img {
     width: 100%;
@@ -40,7 +40,7 @@
 }
 
 .about__image--tall {
-  flex: 3;
+  flex: 590;
 }
 
 @media (max-width: $breakpoint-tablet) {
