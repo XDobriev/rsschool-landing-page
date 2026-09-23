@@ -152,7 +152,7 @@
 }
 
 .catalog__more {
-  display: none;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 60px;
@@ -167,9 +167,5 @@
 
   &:hover {
     background-color: var(--color-border-primary);
-  }
-
-  @media (max-width: $breakpoint-tablet) {
-    display: flex;
   }
 }
