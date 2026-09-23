@@ -8,6 +8,9 @@ $gutter-desktop: 40px;
 $gutter-mobile: 16px;
 $container-max-width: 1440px;
 
+// header height on mobile, used by the burger menu panel
+$header-height: 108px;
+
 :root {
   --color-text-primary: #403f3d;
   --color-text-inverse: #e1d4c9;
@@ -15,7 +18,8 @@ $container-max-width: 1440px;
 
   --color-bg-page: #e1d4c9;
   --color-bg-container: #665f55;
-  --color-bg-overlay: #403f3d;
+  --color-bg-surface: #f2ebe4;
+  --color-bg-overlay: rgb(64 63 61 / 60%);
 
   --color-border-primary: #c1b6ad;
   --color-border-inverse: #665f55;
@@ -30,7 +34,8 @@ $container-max-width: 1440px;
 
   --color-bg-page: #292826;
   --color-bg-container: #403f3d;
-  --color-bg-overlay: #292826cc;
+  --color-bg-surface: #403f3d;
+  --color-bg-overlay: rgb(20 19 18 / 70%);
 
   --color-border-primary: #665f55;
   --color-border-inverse: #c1b6ad;
