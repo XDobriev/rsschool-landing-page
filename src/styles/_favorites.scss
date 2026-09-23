@@ -127,4 +127,12 @@
     font-size: 2rem;
     margin-bottom: 32px;
   }
+
+  .slider {
+    padding-inline: 0;
+  }
+
+  .slider__control {
+    display: none;
+  }
 }
