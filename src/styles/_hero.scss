@@ -62,7 +62,6 @@
 
 @media (max-width: $breakpoint-tablet) {
   .hero__inner {
-    min-height: 480px;
     padding: 32px;
   }
 
@@ -73,5 +72,11 @@
 
   .hero__text {
     max-width: none;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .hero__inner {
+    min-height: 552px;
   }
 }

@@ -33,7 +33,8 @@
 
 .app__buttons {
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .app__button {
@@ -103,15 +104,15 @@
 @media (max-width: $breakpoint-tablet) {
   .app__inner {
     flex-direction: column;
-    text-align: center;
   }
 
   .app__offer {
     max-width: none;
   }
 
-  .app__buttons {
-    justify-content: center;
+  .app__image {
+    width: 100%;
+    max-width: 630px;
   }
 }
 
