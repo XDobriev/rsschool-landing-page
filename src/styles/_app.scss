@@ -1,7 +1,7 @@
 @use 'variables' as *;
 
 .app {
-  padding-block: 80px;
+  padding-block: 50px;
 }
 
 .app__inner {
@@ -40,8 +40,10 @@
 .app__button {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 24px;
+  gap: 8px;
+  width: 200px;
+  height: 64px;
+  padding-inline: 20px;
   border: 1px solid var(--color-border-primary);
   border-radius: 999px;
   color: var(--color-text-primary);
@@ -85,7 +87,7 @@
 .app__button-text {
   display: flex;
   flex-direction: column;
-  font: 600 0.9375rem/1.3 'Inter', sans-serif;
+  font: 600 1rem/1.5 'Inter', sans-serif;
 }
 
 .app__button-label {

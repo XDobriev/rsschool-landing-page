@@ -2,7 +2,11 @@
 @use 'mixins' as *;
 
 .hero {
-  @include edge-gutter;
+  padding: 0 $gutter-desktop $gutter-desktop;
+
+  @media (max-width: $breakpoint-small) {
+    padding: 0 $gutter-mobile $gutter-mobile;
+  }
 }
 
 .hero__inner {

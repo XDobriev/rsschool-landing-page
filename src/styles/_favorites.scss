@@ -1,13 +1,13 @@
 @use 'variables' as *;
 
 .favorites {
-  padding-block: 80px;
+  padding-block: 50px;
   text-align: center;
 }
 
 .favorites__title {
   font: 600 2.5rem/1.25 'Inter', sans-serif;
-  margin: 0 0 48px;
+  margin: 0 0 40px;
 
   em {
     font-style: italic;
@@ -32,7 +32,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .slider__slide[hidden] {
@@ -49,20 +49,20 @@
 }
 
 .slider__name {
-  font: 600 1.25rem/1.4 'Inter', sans-serif;
+  font: 600 1.5rem/1.25 'Inter', sans-serif;
   margin: 0;
 }
 
 .slider__description {
   max-width: 480px;
   color: var(--color-text-primary);
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.5;
   margin: 0;
 }
 
 .slider__price {
-  font: 600 1.125rem/1.4 'Inter', sans-serif;
+  font: 600 1.5rem/1.25 'Inter', sans-serif;
   color: var(--color-text-primary);
   margin: 0;
 }
@@ -97,7 +97,7 @@
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-top: 32px;
+  margin-top: 40px;
 }
 
 .slider__dot {
