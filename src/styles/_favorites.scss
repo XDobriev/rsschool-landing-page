@@ -6,7 +6,10 @@
 }
 
 .favorites__title {
-  font: 600 2.5rem/1.25 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: $heading-2;
+  line-height: 1.25;
   margin: 0 0 40px;
 
   em {
@@ -38,7 +41,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 20px;
 }
 
 .slider__image {
@@ -73,17 +76,26 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 60px;
   height: 60px;
+  padding: 0;
   border-radius: 50%;
   border: 1px solid var(--color-border-inverse);
   background: transparent;
-  font-size: 1.25rem;
+  color: var(--color-text-primary);
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 
   &:hover {
-    background-color: var(--color-border-inverse);
+    background-color: var(--color-bg-container);
+    border-color: var(--color-bg-container);
+    color: var(--color-text-inverse);
   }
 }
 
@@ -117,24 +129,8 @@
   }
 }
 
-@media (max-width: $breakpoint-tablet) {
-  .slider__viewport {
-    margin-inline: 44px;
-  }
-
-  .slider__control {
-    width: 40px;
-    height: 40px;
-  }
-}
-
-@media (max-width: $breakpoint-mobile) {
-  .favorites__title {
-    font-size: 2rem;
-    margin-bottom: 32px;
-  }
-
-  // there is no room for the controls beside the slide, so they sit on the image
+@media (max-width: $breakpoint-small) {
+  // there is no room left for the controls beside the slide, so they sit on it
   .slider__viewport {
     margin-inline: 0;
   }
