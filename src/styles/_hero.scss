@@ -15,9 +15,7 @@
   min-height: 644px;
   border-radius: 40px;
   overflow: hidden;
-  background:
-    linear-gradient(90deg, rgba(41, 40, 38, 0.8) 0%, rgba(41, 40, 38, 0.4) 45%, rgba(41, 40, 38, 0) 70%),
-    url('../assets/hero.jpg') center/cover no-repeat;
+  background: url('../assets/hero.jpg') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
