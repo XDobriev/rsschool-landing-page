@@ -63,12 +63,6 @@
   color: var(--color-text-primary);
   font: 600 1rem/1.5 'Inter', sans-serif;
   text-decoration: none;
-  transition: background-color 0.2s ease;
-
-  &:hover {
-    background-color: var(--color-text-accent);
-    color: var(--color-btn-hover-text);
-  }
 }
 
 // the cup joins the label on hover, as in the design; at rest it takes no
