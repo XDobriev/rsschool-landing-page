@@ -24,7 +24,8 @@
 
 .slider__viewport {
   overflow: hidden;
-  margin-inline: 76px;
+  // leaves the slide 1152px wide at 1440 and 480px at 768, as in the design
+  margin-inline: 104px;
 }
 
 .slider__track {
@@ -41,7 +42,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .slider__image {
@@ -51,6 +52,8 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 16px;
+  // the design leaves 20px under the photo and 16px between the text lines
+  margin-bottom: 4px;
 }
 
 .slider__name {
@@ -100,11 +103,11 @@
 }
 
 .slider__control--prev {
-  left: 0;
+  left: 4px;
 }
 
 .slider__control--next {
-  right: 0;
+  right: 4px;
 }
 
 .slider__dots {
@@ -129,8 +132,9 @@
   }
 }
 
-@media (max-width: $breakpoint-small) {
-  // there is no room left for the controls beside the slide, so they sit on it
+// below this the 104px sides would squeeze the photo, so the slide takes the
+// full width and the controls sit on it — part 2 needs them at every width
+@media (max-width: 640px) {
   .slider__viewport {
     margin-inline: 0;
   }
