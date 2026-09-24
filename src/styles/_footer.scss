@@ -83,13 +83,14 @@
 .contacts-list__link,
 .contacts-list__item {
   display: flex;
-  align-items: center;
+  // the icon sits at the top of the text line in the design
+  align-items: flex-start;
   gap: 8px;
   // the design gives each row 24px of content and 4px of room underneath
   padding-bottom: 4px;
   color: var(--color-text-inverse);
   text-decoration: none;
-  font: 400 1rem/1.5 'Inter', sans-serif;
+  font: 600 1rem/1.5 'Inter', sans-serif;
 }
 
 .contacts-list__icon {

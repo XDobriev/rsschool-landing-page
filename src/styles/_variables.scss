@@ -45,8 +45,10 @@ $heading-2: clamp(2rem, 0.2861rem + 7.2165vw, 3.75rem);
   --color-bg-modal: #403f3d;
   --color-bg-overlay: rgb(41 40 38 / 80%);
 
-  --color-tab-active-bg: #292826;
-  --color-tab-active-icon: #403f3d;
+  // on the page the active pill is the container colour with a page-coloured
+  // icon circle; the modal swaps the pair, see _modal.scss
+  --color-tab-active-bg: #403f3d;
+  --color-tab-active-icon: #292826;
 
   --color-border-primary: #665f55;
   --color-border-inverse: #c1b6ad;

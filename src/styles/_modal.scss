@@ -16,6 +16,13 @@
     visibility 0.3s ease;
 }
 
+// the dark modal window is already the container colour, so its active option
+// takes the page colour instead and the icon circle takes the container one
+[data-theme='dark'] .modal {
+  --color-tab-active-bg: #292826;
+  --color-tab-active-icon: #403f3d;
+}
+
 .modal--open {
   visibility: visible;
   opacity: 1;

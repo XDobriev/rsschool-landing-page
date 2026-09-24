@@ -57,6 +57,10 @@
 
 .nav__link {
   position: relative;
+  display: block;
+  // the design's menu item is 24px of text and 4px of room for the underline,
+  // centred as a whole, so the text sits 2px above the header's centre line
+  padding-bottom: 4px;
   font: 600 1rem/1.5 'Inter', sans-serif;
   color: var(--color-text-primary);
   text-decoration: none;
@@ -67,7 +71,7 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -4px;
+    bottom: 0;
     width: 0;
     height: 1px;
     background-color: currentColor;
@@ -92,8 +96,10 @@
 .menu-link {
   position: relative;
   display: flex;
-  align-items: center;
+  // the cup sits at the top of the text line in the design, not centred on it
+  align-items: flex-start;
   gap: 8px;
+  padding-bottom: 4px;
   font: 600 1rem/1.5 'Inter', sans-serif;
   color: var(--color-text-primary);
   text-decoration: none;
@@ -103,7 +109,7 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -4px;
+    bottom: 0;
     width: 0;
     height: 1px;
     background-color: currentColor;
@@ -170,7 +176,7 @@
   align-items: center;
   justify-content: center;
   // the two bars sit 8px apart from centre to centre
-  gap: 6.5px;
+  gap: 6px;
   width: 44px;
   height: 44px;
   padding: 0;
@@ -183,9 +189,11 @@
   span {
     display: block;
     width: 16px;
-    height: 1.5px;
+    // Chrome snaps a 1.5px bar to a faint 1px line; 2px at 75% gives the same
+    // ink as the design's 1.5px stroke
+    height: 2px;
     border-radius: 1px;
-    background-color: currentColor;
+    background-color: color-mix(in srgb, currentColor 75%, transparent);
     transition: transform 0.3s ease;
   }
 }
@@ -261,7 +269,9 @@
     text-align: center;
   }
 
+  // each panel link is 40px tall, with no room kept for the underline
   .nav__link {
+    padding-bottom: 0;
     font-size: 2rem;
     line-height: 1.25;
   }
@@ -283,7 +293,7 @@
   }
 
   .header__actions {
-    gap: 12px;
+    gap: 24px;
   }
 
   .theme-toggle__btn {
@@ -297,5 +307,9 @@
   .nav {
     justify-content: flex-start;
     padding-inline: $gutter-mobile;
+  }
+
+  .header__actions {
+    gap: 12px;
   }
 }

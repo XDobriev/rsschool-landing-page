@@ -113,8 +113,10 @@
 .card {
   display: flex;
   flex-direction: column;
+  // every card is 506px tall in the design, whatever the length of its text
+  min-height: 506px;
   border: 1px solid var(--color-border-primary);
-  border-radius: 20px;
+  border-radius: 40px;
   overflow: hidden;
   cursor: pointer;
   transition: border-color 0.2s ease;
@@ -128,17 +130,23 @@
     outline-offset: 2px;
   }
 
+  // the design's hover state shows the whole photo, about 10% smaller
   &:hover .card__image {
-    transform: scale(1.1);
+    object-view-box: inset(0);
   }
 }
 
+// the photo box covers the card's border and is rounded on every corner; at
+// rest it shows the middle 310px of the 340px photo
 .card__image {
-  width: 100%;
+  width: calc(100% + 2px);
+  margin: -1px -1px 0;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+  object-view-box: inset(4.41%);
+  border-radius: 40px;
   display: block;
-  transition: transform 0.4s ease;
+  transition: object-view-box 0.4s ease;
 }
 
 .card__body {
@@ -147,6 +155,8 @@
   flex-direction: column;
   justify-content: space-between;
   gap: 12px;
+  // the design's border lies inside the card, over the text block's padding
+  margin-bottom: -1px;
   padding: 20px;
   text-align: left;
 }
@@ -183,7 +193,7 @@
   height: 60px;
   margin: 40px auto 0;
   border-radius: 50%;
-  border: 1px solid var(--color-border-primary);
+  border: 1px solid var(--color-border-inverse);
   background: transparent;
   color: var(--color-text-primary);
   cursor: pointer;
