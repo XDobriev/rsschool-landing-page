@@ -56,7 +56,6 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
   width: 200px;
   height: 64px;
   border-radius: 999px;
@@ -72,16 +71,25 @@
   }
 }
 
-// the cup joins the label on hover, as in the design; the button has a fixed
-// width so nothing around it moves
+// the cup joins the label on hover, as in the design; at rest it takes no
+// space at all so the label stays centred, and the button keeps a fixed width
+// so nothing around it moves
 .btn__icon {
   flex-shrink: 0;
+  width: 0;
+  margin-left: 0;
+  overflow: hidden;
   opacity: 0;
-  transition: opacity 0.2s ease;
+  transition:
+    width 0.2s ease,
+    margin-left 0.2s ease,
+    opacity 0.2s ease;
 }
 
 .btn:hover .btn__icon,
 .btn:focus-visible .btn__icon {
+  width: 20px;
+  margin-left: 8px;
   opacity: 1;
 }
 
@@ -100,6 +108,8 @@
 
   // on touch widths the design shows the cup without any hover
   .btn__icon {
+    width: 20px;
+    margin-left: 8px;
     opacity: 1;
   }
 }
