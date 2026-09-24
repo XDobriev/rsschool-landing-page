@@ -20,6 +20,8 @@
   font-weight: 600;
   font-size: $heading-2;
   line-height: 1.25;
+  // keeps the two lines even instead of leaving one word hanging
+  text-wrap: balance;
   margin: 0 0 40px;
 
   em {
