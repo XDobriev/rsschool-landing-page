@@ -1,22 +1,22 @@
 @use 'variables' as *;
 
 .catalog {
-  padding-block: 50px;
+  // the section opens the page, so the gap above it comes from the header
+  padding-block: 0 50px;
   text-align: center;
 }
 
 .catalog__title {
-  font: 600 3.75rem/1.25 'Inter', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: $heading-2;
+  line-height: 1.25;
   max-width: 800px;
   margin: 0 auto 40px;
 
   em {
     font-style: italic;
     color: var(--color-text-accent);
-  }
-
-  @media (max-width: $breakpoint-tablet) {
-    font-size: 2rem;
   }
 }
 
@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px 8px 8px;
+  padding: 7px 16px 7px 7px;
   border-radius: 100px;
   border: 1px solid var(--color-border-primary);
   background: transparent;
@@ -84,14 +84,28 @@
   }
 }
 
+// the design lays the cards out four across; the columns may give up a few
+// pixels of the 310px card so that four still fit once a scrollbar is there
 .catalog__grid {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 310px));
   justify-content: center;
   gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;
+
+  @media (max-width: 1215px) {
+    grid-template-columns: repeat(3, minmax(0, 310px));
+  }
+
+  @media (max-width: 924px) {
+    grid-template-columns: repeat(2, minmax(0, 310px));
+  }
+
+  @media (max-width: 634px) {
+    grid-template-columns: minmax(0, 310px);
+  }
 
   &[hidden] {
     display: none;
@@ -99,24 +113,29 @@
 }
 
 .card {
-  width: 310px;
   display: flex;
   flex-direction: column;
   border: 1px solid var(--color-border-primary);
-  border-radius: 40px;
+  border-radius: 20px;
   overflow: hidden;
   transition: border-color 0.2s ease;
 
   &:hover {
     border-color: var(--color-text-accent);
   }
+
+  &:hover .card__image {
+    transform: scale(1.1);
+  }
 }
 
 .card__image {
   width: 100%;
-  height: 310px;
+  aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
 }
 
 .card__body {
@@ -124,7 +143,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 20px;
+  gap: 12px;
   padding: 20px;
   text-align: left;
 }
@@ -151,8 +170,10 @@
   margin: 0;
 }
 
+// the design shows every card of a category on desktop; only the narrower
+// layouts start with four and offer the rest behind the button
 .catalog__more {
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
   width: 60px;
@@ -167,5 +188,27 @@
 
   &:hover {
     background-color: var(--color-border-primary);
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .catalog__grid .card:nth-child(n + 5) {
+    display: none;
+  }
+
+  .catalog__more {
+    display: flex;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .tabs {
+    gap: 8px;
+  }
+
+  // the three tabs have to stay on one row inside 348px
+  .tab {
+    gap: 6px;
+    padding-right: 10px;
   }
 }

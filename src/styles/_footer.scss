@@ -2,7 +2,7 @@
 @use 'mixins' as *;
 
 .footer {
-  @include edge-gutter;
+  @include edge-gutter-bottom;
 }
 
 
@@ -16,9 +16,8 @@
 
   background-color: var(--color-bg-container);
   color: var(--color-text-inverse);
-  border-radius: 32px;
+  border-radius: 40px;
   padding: 100px;
-  --color-text-accent: #e8bd8e;
 }
 
 .footer__offer,
@@ -26,9 +25,16 @@
   flex: 1;
 }
 
+.footer__contacts {
+  align-self: center;
+}
+
 .footer__slogan {
-  font: 600 3.75rem/1.25 'Inter', sans-serif;
-  margin: 0 0 24px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: $heading-2;
+  line-height: 1.25;
+  margin: 0 0 40px;
 
   em {
     font-style: italic;
@@ -62,7 +68,7 @@
 
 .footer__title {
   font: 600 1.5rem/1.25 'Inter', sans-serif;
-  margin: 0 0 24px;
+  margin: 0 0 40px;
 }
 
 .contacts-list {
@@ -99,8 +105,8 @@
     padding: 100px 60px;
   }
 
-  .footer__slogan {
-    font-size: 2.5rem;
+  .footer__contacts {
+    align-self: stretch;
   }
 }
 
@@ -108,9 +114,5 @@
   .footer__inner {
     gap: 40px;
     padding: 60px 16px;
-  }
-
-  .footer__slogan {
-    font-size: 2rem;
   }
 }

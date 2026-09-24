@@ -8,10 +8,15 @@ $gutter-desktop: 40px;
 $gutter-mobile: 16px;
 $container-max-width: 1440px;
 
+// heading sizes scale between the two sizes the design specifies: 42/32px at
+// 380px and 72/60px at 768px and up
+$heading-1: clamp(2.625rem, 0.7887rem + 7.732vw, 4.5rem);
+$heading-2: clamp(2rem, 0.2861rem + 7.2165vw, 3.75rem);
+
 :root {
   --color-text-primary: #403f3d;
   --color-text-inverse: #e1d4c9;
-  --color-text-accent: #6f4f36;
+  --color-text-accent: #b0907a;
 
   --color-bg-page: #e1d4c9;
   --color-bg-container: #665f55;
@@ -20,7 +25,7 @@ $container-max-width: 1440px;
   --color-border-primary: #c1b6ad;
   --color-border-inverse: #665f55;
 
-  --color-btn-hover-text: #e1d4c9;
+  --color-btn-hover-text: #292826;
 }
 
 [data-theme='dark'] {

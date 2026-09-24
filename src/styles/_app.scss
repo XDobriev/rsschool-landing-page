@@ -16,8 +16,11 @@
 }
 
 .app__title {
-  font: 600 2.5rem/1.25 'Inter', sans-serif;
-  margin: 0 0 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: $heading-2;
+  line-height: 1.25;
+  margin: 0 0 40px;
 
   em {
     font-style: italic;
@@ -27,8 +30,8 @@
 
 .app__text {
   color: var(--color-text-primary);
-  line-height: 1.6;
-  margin: 0 0 32px;
+  line-height: 1.5;
+  margin: 0 0 40px;
 }
 
 .app__buttons {
@@ -91,8 +94,8 @@
 }
 
 .app__button-label {
-  font-size: 0.6875rem;
-  font-weight: 400;
+  font-size: 0.625rem;
+  line-height: 1.4;
 }
 
 .app__image {
@@ -119,7 +122,7 @@
 }
 
 @media (max-width: $breakpoint-mobile) {
-  .app__title {
-    font-size: 2rem;
+  .app__inner {
+    gap: 40px;
   }
 }

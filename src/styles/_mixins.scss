@@ -7,3 +7,13 @@
     padding: $gutter-mobile;
   }
 }
+
+// the gap above a block that sits right on the page edge is shared with the
+// previous section, which contributes the other half
+@mixin edge-gutter-bottom {
+  padding: 50px $gutter-desktop $gutter-desktop;
+
+  @media (max-width: $breakpoint-small) {
+    padding: 50px $gutter-mobile $gutter-desktop;
+  }
+}
