@@ -1,0 +1,138 @@
+@use 'variables' as *;
+
+.app {
+  padding-block: 50px;
+}
+
+.app__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+.app__offer {
+  max-width: 630px;
+}
+
+.app__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: $heading-2;
+  line-height: 1.25;
+  // keeps the two lines even instead of leaving one word hanging
+  text-wrap: balance;
+  margin: 0 0 40px;
+
+  em {
+    font-style: italic;
+    color: var(--color-text-accent);
+  }
+}
+
+.app__text {
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  margin: 0 0 40px;
+}
+
+.app__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.app__button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 200px;
+  height: 64px;
+  padding-inline: 20px;
+  border: 1px solid var(--color-border-inverse);
+  border-radius: 999px;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-bg-container);
+    border-color: var(--color-bg-container);
+    color: var(--color-text-inverse);
+  }
+}
+
+// a 36px icon box with the logo inset inside it, as the design draws it
+.app__icon {
+  flex-shrink: 0;
+  display: block;
+  width: 36px;
+  height: 36px;
+}
+
+.app__icon--store {
+  padding: 1.8px 4.94px 2.55px 4.65px;
+}
+
+.app__icon--play {
+  padding: 1.8px 2.47px 1.41px 3.18px;
+}
+
+.app__icon--dark {
+  display: none;
+}
+
+// the dark theme's icons are the light ones the hover state needs
+[data-theme='dark'],
+.app__button:hover {
+  .app__icon--light {
+    display: none;
+  }
+
+  .app__icon--dark {
+    display: block;
+  }
+}
+
+.app__button-text {
+  display: flex;
+  flex-direction: column;
+  font: 600 1rem/1.5 'Inter', sans-serif;
+}
+
+.app__button-label {
+  font-size: 0.625rem;
+  line-height: 1.4;
+}
+
+.app__image {
+  width: 630px;
+  max-width: 100%;
+  height: auto;
+  min-width: 0;
+  display: block;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .app__inner {
+    flex-direction: column;
+  }
+
+  .app__offer {
+    max-width: none;
+  }
+
+  .app__image {
+    width: 100%;
+    max-width: 630px;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .app__inner {
+    gap: 40px;
+  }
+}

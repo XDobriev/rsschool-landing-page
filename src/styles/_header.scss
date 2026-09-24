@@ -1,0 +1,237 @@
+@use 'variables' as *;
+
+.header {
+  // the design leaves 20px above and below the 60px logo
+  padding-block: 20px;
+}
+
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: block;
+}
+
+.logo__image {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.logo__image--dark {
+  display: none;
+}
+
+[data-theme='dark'] {
+  .logo__image--light {
+    display: none;
+  }
+
+  .logo__image--dark {
+    display: block;
+  }
+}
+
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  margin-inline-end: 44px;
+}
+
+.nav__list {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__link {
+  position: relative;
+  display: block;
+  // the design's menu item is 24px of text and 4px of room for the underline,
+  // centred as a whole, so the text sits 2px above the header's centre line
+  padding-bottom: 4px;
+  font: 600 1rem/1.5 'Inter', sans-serif;
+  color: var(--color-text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+  }
+
+  // the design's hover keeps the colour and draws a 2px line under the item
+  &:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.menu-link {
+  position: relative;
+  display: flex;
+  // the cup sits at the top of the text line in the design, not centred on it
+  align-items: flex-start;
+  gap: 8px;
+  padding-bottom: 4px;
+  font: 600 1rem/1.5 'Inter', sans-serif;
+  color: var(--color-text-primary);
+  text-decoration: none;
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+  }
+
+  // the design's hover keeps the colour and draws a 2px line under the item;
+  // on the catalog page the line marks the page you are on
+  &:hover::after,
+  &[aria-current='page']::after {
+    transform: scaleX(1);
+  }
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  // 4px in the design, less the 1px border so the switch stays 88/104 wide
+  padding: 3px;
+  border-radius: 100px;
+  border: 1px solid var(--color-border-primary);
+}
+
+.theme-toggle__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  // without this the browser's default button padding squeezes the icon
+  padding: 0;
+  border-radius: 50%;
+  border: none;
+  background: transparent;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-bg-container);
+    color: var(--color-text-inverse);
+  }
+}
+
+.theme-toggle__btn--active {
+  background: var(--color-text-accent);
+  color: var(--color-text-inverse);
+
+  &:hover {
+    background-color: var(--color-text-accent);
+  }
+}
+
+.theme-toggle__icon {
+  display: block;
+}
+
+.burger {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // the two bars sit 8px apart from centre to centre
+  gap: 6px;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--color-border-inverse);
+  border-radius: 100px;
+  color: var(--color-text-primary);
+  cursor: pointer;
+
+  span {
+    display: block;
+    width: 16px;
+    // Chrome snaps a 1.5px bar to a faint 1px line; 2px at 75% gives the same
+    // ink as the design's 1.5px stroke
+    height: 2px;
+    border-radius: 1px;
+    background-color: color-mix(in srgb, currentColor 75%, transparent);
+  }
+}
+
+// between the tablet breakpoint and this width the full nav, the menu link and
+// the theme switch do not fit side by side at their design sizes
+@media (max-width: 900px) {
+  .nav {
+    margin-inline-end: 0;
+  }
+
+  .nav__list {
+    gap: 20px;
+  }
+
+  .header__actions {
+    gap: 16px;
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .nav__list {
+    display: none;
+  }
+
+  .menu-link {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
+  }
+
+  .header__actions {
+    gap: 24px;
+  }
+
+  .theme-toggle__btn {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .header__actions {
+    gap: 12px;
+  }
+}
