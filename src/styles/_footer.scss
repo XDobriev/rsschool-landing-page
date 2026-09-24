@@ -85,13 +85,17 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  // the design gives each row 24px of content and 4px of room underneath
+  padding-bottom: 4px;
   color: var(--color-text-inverse);
   text-decoration: none;
-  font-size: 1rem;
+  font: 400 1rem/1.5 'Inter', sans-serif;
 }
 
 .contacts-list__icon {
   flex-shrink: 0;
+  width: 20px;
+  height: 20px;
 }
 
 .contacts-list__link:hover {
