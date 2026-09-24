@@ -7,7 +7,9 @@
         document.documentElement.setAttribute('data-theme', 'dark');
       }
     </script>
+    <link rel="icon" href="/rsschool-landing-page/favicon.ico" sizes="32x32">
     <link rel="icon" type="image/svg+xml" href="/rsschool-landing-page/favicon.svg">
+    <link rel="apple-touch-icon" href="/rsschool-landing-page/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,9 +17,8 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,400&display=swap"
       rel="stylesheet">
     <title>Coffee House</title>
-    <script type="module" crossorigin src="/rsschool-landing-page/assets/main-gQ5c8aqT.js"></script>
-    <link rel="modulepreload" crossorigin href="/rsschool-landing-page/assets/burger-Hjq0psir.js">
-    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/burger-BdVOvpEL.css">
+    <script type="module" crossorigin src="/rsschool-landing-page/assets/theme-BXtWo1Z8.js"></script>
+    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/theme-NIA0Y7rv.css">
   </head>
   <body>
     <header class="header">
@@ -40,21 +41,18 @@
             <li class="nav__item">
               <a href="#footer" class="nav__link">Contact us</a>
             </li>
-            <li class="nav__item nav__item--mobile">
-              <a href="catalog.html" class="nav__link">Menu</a>
-            </li>
           </ul>
         </nav>
 
         <div class="header__actions">
           <div class="theme-toggle">
             <button type="button" class="theme-toggle__btn" data-theme-value="light" aria-label="Light theme">
-              <svg class="theme-toggle__icon" width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg class="theme-toggle__icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M17 10V8C17 7.45 17.45 7 18 7C18.55 7 19 7.45 19 8V10C19 10.55 18.55 11 18 11C17.45 11 17 10.55 17 10ZM24.36 13.05L25.77 11.63C26.16 11.24 26.16 10.61 25.77 10.22C25.38 9.83 24.75 9.83 24.36 10.22L22.95 11.64C22.56 12.03 22.56 12.66 22.95 13.05C23.34 13.44 23.97 13.44 24.36 13.05ZM28 17H26C25.45 17 25 17.45 25 18C25 18.55 25.45 19 26 19H28C28.55 19 29 18.55 29 18C29 17.45 28.55 17 28 17ZM18 25C17.45 25 17 25.45 17 26V28C17 28.55 17.45 29 18 29C18.55 29 19 28.55 19 28V26C19 25.45 18.55 25 18 25ZM11.64 13.05L10.22 11.64C9.83 11.25 9.83 10.61 10.22 10.23C10.61 9.85 11.25 9.84 11.63 10.23L13.04 11.64C13.43 12.03 13.43 12.67 13.04 13.05C12.65 13.43 12.02 13.44 11.64 13.05ZM22.95 22.95C22.56 23.34 22.56 23.98 22.95 24.36L24.36 25.77C24.75 26.16 25.39 26.16 25.77 25.77C26.16 25.38 26.16 24.74 25.77 24.36L24.36 22.95C23.98 22.56 23.34 22.56 22.95 22.95ZM8 19H10C10.55 19 11 18.55 11 18C11 17.45 10.55 17 10 17H8C7.45 17 7 17.45 7 18C7 18.55 7.45 19 8 19ZM11.64 25.78L13.05 24.37C13.44 23.98 13.44 23.34 13.05 22.96C12.66 22.58 12.02 22.57 11.64 22.96L10.23 24.37C9.84 24.76 9.84 25.4 10.23 25.78C10.61 26.17 11.25 26.17 11.64 25.78ZM18 12C14.69 12 12 14.69 12 18C12 21.31 14.69 24 18 24C21.31 24 24 21.31 24 18C24 14.69 21.31 12 18 12Z" fill="currentColor"/>
               </svg>
             </button>
             <button type="button" class="theme-toggle__btn" data-theme-value="dark" aria-label="Dark theme">
-              <svg class="theme-toggle__icon" width="18" height="18" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg class="theme-toggle__icon" width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <path d="M18 9C13.03 9 9 13.03 9 18C9 22.97 13.03 27 18 27C22.97 27 27 22.97 27 18C27 17.54 26.96 17.08 26.9 16.64C25.92 18.01 24.32 18.9 22.5 18.9C19.52 18.9 17.1 16.48 17.1 13.5C17.1 11.69 17.99 10.08 19.36 9.1C18.92 9.04 18.46 9 18 9Z" fill="currentColor"/>
               </svg>
             </button>
@@ -87,7 +85,15 @@
             House Resource is a popular destination for coffee lovers and those
             seeking a warm and inviting space to enjoy their favorite beverage.
           </p>
-          <a href="catalog.html" class="btn">Menu</a>
+          <a href="catalog.html" class="btn">
+            Menu
+            <svg class="btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M14.1667 9.76667V11.6667C14.1667 14.8883 11.555 17.5 8.33333 17.5C5.11167 17.5 2.5 14.8883 2.5 11.6667V9.76667C2.5 9.4353 2.76863 9.16667 3.1 9.16667H13.5667C13.898 9.16667 14.1667 9.4353 14.1667 9.76667Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M10 7.5C10 6.66667 10.5952 5.83333 11.7857 5.83333C13.1007 5.83333 14.1667 4.76734 14.1667 3.45238V2.91667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M6.66667 7.5V7.08333C6.66667 5.70262 7.78595 4.58333 9.16667 4.58333C10.0871 4.58333 10.8333 3.83714 10.8333 2.91667V2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.3333 9.16667H15.4167C16.5673 9.16667 17.5 10.0994 17.5 11.25C17.5 12.4006 16.5673 13.3333 15.4167 13.3333H14.1667" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </a>
         </div>
       </section>
 
@@ -96,49 +102,55 @@
           <h2 class="favorites__title">Choose your <em>favorite</em> coffee</h2>
 
           <div class="slider">
-            <button type="button" class="slider__control slider__control--prev" aria-label="Previous slide">‹</button>
+            <button type="button" class="slider__control slider__control--prev" aria-label="Previous slide">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M16.25 10H3.75M3.75 10L9.375 4.375M3.75 10L9.375 15.625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
 
-            <div class="slider__viewport">
-              <ul class="slider__track">
-                <li class="slider__slide">
-                  <img src="/rsschool-landing-page/assets/coffee-slider-1-mxe-wPsS.png" alt="S'mores Frappuccino" class="slider__image">
-                  <h3 class="slider__name">S'mores Frappuccino</h3>
-                  <p class="slider__description">
-                    This new drink takes an espresso and mixes it with brown sugar
-                    and cinnamon before being topped with oat milk.
-                  </p>
-                  <p class="slider__price">$5.50</p>
-                </li>
+            <ul class="slider__track">
+              <li class="slider__slide">
+                <img src="/rsschool-landing-page/assets/coffee-slider-1-mxe-wPsS.png" alt="S'mores Frappuccino" class="slider__image">
+                <h3 class="slider__name">S'mores Frappuccino</h3>
+                <p class="slider__description">
+                  This new drink takes an espresso and mixes it with brown sugar
+                  and cinnamon before being topped with oat milk.
+                </p>
+                <p class="slider__price">$5.50</p>
+              </li>
 
-                <li class="slider__slide">
-                  <img src="/rsschool-landing-page/assets/coffee-slider-2-ne7ttB2Q.png" alt="Caramel Macchiato" class="slider__image">
-                  <h3 class="slider__name">Caramel Macchiato</h3>
-                  <p class="slider__description">
-                    Fragrant and unique classic espresso with rich caramel-peanut
-                    syrup, with cream under whipped thick foam.
-                  </p>
-                  <p class="slider__price">$5.00</p>
-                </li>
+              <li class="slider__slide" hidden>
+                <img src="/rsschool-landing-page/assets/coffee-slider-2-ne7ttB2Q.png" alt="Caramel Macchiato" class="slider__image">
+                <h3 class="slider__name">Caramel Macchiato</h3>
+                <p class="slider__description">
+                  Fragrant and unique classic espresso with rich caramel-peanut
+                  syrup, with cream under whipped thick foam.
+                </p>
+                <p class="slider__price">$5.00</p>
+              </li>
 
-                <li class="slider__slide">
-                  <img src="/rsschool-landing-page/assets/coffee-slider-3-IwvL9hAu.png" alt="Ice coffee" class="slider__image">
-                  <h3 class="slider__name">Ice coffee</h3>
-                  <p class="slider__description">
-                    A popular summer drink that tones and invigorates. Prepared
-                    from coffee, milk and ice.
-                  </p>
-                  <p class="slider__price">$4.50</p>
-                </li>
-              </ul>
-            </div>
+              <li class="slider__slide" hidden>
+                <img src="/rsschool-landing-page/assets/coffee-slider-3-IwvL9hAu.png" alt="Ice coffee" class="slider__image">
+                <h3 class="slider__name">Ice coffee</h3>
+                <p class="slider__description">
+                  A popular summer drink that tones and invigorates. Prepared
+                  from coffee, milk and ice.
+                </p>
+                <p class="slider__price">$4.50</p>
+              </li>
+            </ul>
 
-            <button type="button" class="slider__control slider__control--next" aria-label="Next slide">›</button>
+            <button type="button" class="slider__control slider__control--next" aria-label="Next slide">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M3.75 10H16.25M16.25 10L10.625 4.375M16.25 10L10.625 15.625" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
           </div>
 
           <div class="slider__dots">
-            <button type="button" class="slider__dot slider__dot--active" aria-label="Go to slide 1"></button>
-            <button type="button" class="slider__dot" aria-label="Go to slide 2"></button>
-            <button type="button" class="slider__dot" aria-label="Go to slide 3"></button>
+            <span class="slider__dot slider__dot--active"></span>
+            <span class="slider__dot"></span>
+            <span class="slider__dot"></span>
           </div>
         </div>
       </section>
@@ -182,7 +194,7 @@
             </p>
 
             <div class="app__buttons">
-              <a href="#" class="app__button">
+              <a href="https://www.apple.com/app-store/" class="app__button" target="_blank" rel="noopener noreferrer">
                 <img src="data:image/svg+xml,%3csvg%20width='26.41'%20height='31.65'%20viewBox='0%200%2026.41%2031.65'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.0578%2016.8306C22.0209%2012.8323%2025.4156%2010.8871%2025.5708%2010.7966C23.6483%208.06361%2020.6684%207.69021%2019.6213%207.66043C17.1185%207.40364%2014.6909%209.12057%2013.4159%209.12057C12.1156%209.12057%2010.1523%207.68524%208.03638%207.72742C5.31352%207.76836%202.76624%209.30541%201.36919%2011.6922C-1.51399%2016.5589%200.636305%2023.7107%203.39861%2027.6446C4.7804%2029.5711%206.39503%2031.7223%208.50843%2031.6466C10.576%2031.5635%2011.3483%2030.3614%2013.8435%2030.3614C16.3157%2030.3614%2017.0409%2031.6466%2019.1963%2031.5982C21.4153%2031.5635%2022.8124%2029.6629%2024.1458%2027.719C25.7426%2025.5108%2026.3839%2023.3361%2026.4093%2023.2245C26.3572%2023.2071%2022.0998%2021.6229%2022.0578%2016.8306Z'%20fill='%23403F3D'/%3e%3cpath%20d='M17.9863%205.07263C19.0983%203.71671%2019.8592%201.872%2019.648%200C18.0384%200.0694711%2016.0256%201.08549%2014.8664%202.41164C13.8409%203.58025%2012.9248%205.49566%2013.1615%207.29695C14.9695%207.42845%2016.8259%206.40747%2017.9863%205.07263Z'%20fill='%23403F3D'/%3e%3c/svg%3e" alt="" class="app__icon app__icon--store app__icon--light">
                 <img src="data:image/svg+xml,%3csvg%20width='26.41'%20height='31.65'%20viewBox='0%200%2026.41%2031.65'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M22.0578%2016.8306C22.0209%2012.8323%2025.4156%2010.8871%2025.5708%2010.7966C23.6483%208.06361%2020.6684%207.69021%2019.6213%207.66043C17.1185%207.40364%2014.6909%209.12057%2013.4159%209.12057C12.1156%209.12057%2010.1523%207.68524%208.03638%207.72742C5.31352%207.76836%202.76624%209.30541%201.36919%2011.6922C-1.51399%2016.5589%200.636305%2023.7107%203.39861%2027.6446C4.7804%2029.5711%206.39503%2031.7223%208.50843%2031.6466C10.576%2031.5635%2011.3483%2030.3614%2013.8435%2030.3614C16.3157%2030.3614%2017.0409%2031.6466%2019.1963%2031.5982C21.4153%2031.5635%2022.8124%2029.6629%2024.1458%2027.719C25.7426%2025.5108%2026.3839%2023.3361%2026.4093%2023.2245C26.3572%2023.2071%2022.0998%2021.6229%2022.0578%2016.8306Z'%20fill='%23E1D4C9'/%3e%3cpath%20d='M17.9863%205.07263C19.0983%203.71671%2019.8592%201.872%2019.648%200C18.0384%200.0694711%2016.0256%201.08549%2014.8664%202.41164C13.8409%203.58025%2012.9248%205.49566%2013.1615%207.29695C14.9695%207.42845%2016.8259%206.40747%2017.9863%205.07263Z'%20fill='%23E1D4C9'/%3e%3c/svg%3e" alt="" class="app__icon app__icon--store app__icon--dark">
                 <span class="app__button-text">
@@ -191,7 +203,7 @@
                 </span>
               </a>
 
-              <a href="#" class="app__button">
+              <a href="https://play.google.com/store" class="app__button" target="_blank" rel="noopener noreferrer">
                 <img src="data:image/svg+xml,%3csvg%20width='30.34'%20height='32.79'%20viewBox='0%200%2030.34%2032.79'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0.572202%2031.3904C0.209755%2031.0204%200%2030.4445%200%2029.6986V3.09394C0%202.34807%200.209755%201.77213%200.572202%201.4022L0.661658%201.32099L15.9523%2016.2233V16.5752L0.661658%2031.4776L0.572202%2031.3904Z'%20fill='%23403F3D'/%3e%3cpath%20d='M22.8943%2011.2534L17.803%2016.2234V16.5753L22.9004%2021.5452L23.0146%2021.4805L29.0512%2018.1317C30.774%2017.1813%2030.774%2015.6174%2029.0512%2014.661L23.0146%2011.3181L22.8943%2011.2534V11.2534Z'%20fill='%23403F3D'/%3e%3cpath%20d='M22.09%2010.3926L16.8784%2015.4739L1.49835%200.476785C2.07055%20-0.109685%203.00366%20-0.180363%204.06478%200.406106L22.09%2010.3926'%20fill='%23403F3D'/%3e%3cpath%20d='M22.09%2022.4059L4.06478%2032.3924C3.00366%2032.9729%202.07055%2032.9022%201.49835%2032.3157L16.8784%2017.3246L22.09%2022.4059Z'%20fill='%23403F3D'/%3e%3c/svg%3e" alt="" class="app__icon app__icon--play app__icon--light">
                 <img src="data:image/svg+xml,%3csvg%20width='30.34'%20height='32.79'%20viewBox='0%200%2030.34%2032.79'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M0.572202%2031.3904C0.209755%2031.0204%200%2030.4445%200%2029.6986V3.09394C0%202.34807%200.209755%201.77213%200.572202%201.4022L0.661658%201.32099L15.9523%2016.2233V16.5752L0.661658%2031.4776L0.572202%2031.3904Z'%20fill='%23E1D4C9'/%3e%3cpath%20d='M22.8943%2011.2534L17.803%2016.2234V16.5753L22.9004%2021.5452L23.0146%2021.4805L29.0512%2018.1317C30.774%2017.1813%2030.774%2015.6174%2029.0512%2014.661L23.0146%2011.3181L22.8943%2011.2534V11.2534Z'%20fill='%23E1D4C9'/%3e%3cpath%20d='M22.09%2010.3926L16.8784%2015.4739L1.49835%200.476785C2.07055%20-0.109685%203.00366%20-0.180363%204.06478%200.406106L22.09%2010.3926'%20fill='%23E1D4C9'/%3e%3cpath%20d='M22.09%2022.4059L4.06478%2032.3924C3.00366%2032.9729%202.07055%2032.9022%201.49835%2032.3157L16.8784%2017.3246L22.09%2022.4059Z'%20fill='%23E1D4C9'/%3e%3c/svg%3e" alt="" class="app__icon app__icon--play app__icon--dark">
                 <span class="app__button-text">
@@ -202,7 +214,7 @@
             </div>
           </div>
 
-          <img src="/rsschool-landing-page/assets/mobile-screens-pevenitR.png" alt="" class="app__image">
+          <img src="/rsschool-landing-page/assets/mobile-screens-pevenitR.png" alt="The Resource app open on two smartphones" class="app__image">
         </div>
       </section>
     </main>
