@@ -52,8 +52,9 @@
     transition: transform 0.4s ease;
   }
 
+  // the design's hover state shrinks the photo by about 10%, to 660px
   &:hover img {
-    transform: translate(-50%, -50%) scale(1.1);
+    transform: translate(-50%, -50%) scale(0.909);
   }
 }
 
@@ -72,5 +73,11 @@
 
   .about__image--tall {
     display: block;
+  }
+
+  // the box is up to 688px wide here, so the photo shrinks only as far as
+  // still covers it
+  .about__image:hover img {
+    transform: translate(-50%, -50%) scale(0.95);
   }
 }
