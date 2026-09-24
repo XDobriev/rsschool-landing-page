@@ -15,8 +15,9 @@
       href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,400&display=swap"
       rel="stylesheet">
     <title>Coffee House — Menu</title>
-    <script type="module" crossorigin src="/rsschool-landing-page/assets/theme-DeNGgckt.js"></script>
-    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/theme-DApWuyjS.css">
+    <script type="module" crossorigin src="/rsschool-landing-page/assets/catalog-x0BKGqy3.js"></script>
+    <link rel="modulepreload" crossorigin href="/rsschool-landing-page/assets/burger-Hjq0psir.js">
+    <link rel="stylesheet" crossorigin href="/rsschool-landing-page/assets/burger-BdVOvpEL.css">
   </head>
   <body>
     <header class="header">
@@ -38,6 +39,9 @@
             </li>
             <li class="nav__item">
               <a href="index.html#footer" class="nav__link">Contact us</a>
+            </li>
+            <li class="nav__item nav__item--mobile">
+              <a href="catalog.html" class="nav__link">Menu</a>
             </li>
           </ul>
         </nav>
@@ -82,235 +86,28 @@
 
           <ul class="tabs">
             <li>
-              <button type="button" class="tab tab--active" data-category="coffee">
+              <button type="button" class="tab tab--active" data-category="coffee" aria-pressed="true">
                 <span class="tab__icon" aria-hidden="true">☕</span>
                 Coffee
               </button>
             </li>
             <li>
-              <button type="button" class="tab" data-category="tea">
+              <button type="button" class="tab" data-category="tea" aria-pressed="false">
                 <span class="tab__icon" aria-hidden="true">🫖</span>
                 Tea
               </button>
             </li>
             <li>
-              <button type="button" class="tab" data-category="dessert">
+              <button type="button" class="tab" data-category="dessert" aria-pressed="false">
                 <span class="tab__icon" aria-hidden="true">🍰</span>
                 Dessert
               </button>
             </li>
           </ul>
 
-          <ul class="catalog__grid" data-category-grid="coffee">
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/coffee-1-DtocWwCr.jpg" alt="Irish coffee" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Irish coffee</h2>
-                  <p class="card__description">Fragrant black coffee with Jameson Irish whiskey and whipped milk</p>
-                </div>
-                <p class="card__price">$7.00</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/coffee-2-Dt9rSVFt.jpg" alt="Kahlua coffee" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Kahlua coffee</h2>
-                  <p class="card__description">Classic coffee with milk and Kahlua liqueur under a cap of frothed milk</p>
-                </div>
-                <p class="card__price">$7.00</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/coffee-3-ZC_K2sEo.jpg" alt="Honey raf" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Honey raf</h2>
-                  <p class="card__description">Espresso with frothed milk, cream and aromatic honey</p>
-                </div>
-                <p class="card__price">$5.50</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/coffee-4-Bzna4dex.jpg" alt="Ice cappuccino" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Ice cappuccino</h2>
-                  <p class="card__description">Cappuccino with soft thick foam in summer version with ice</p>
-                </div>
-                <p class="card__price">$5.00</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/coffee-5-D_bWq0oU.jpg" alt="Espresso" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Espresso</h2>
-                  <p class="card__description">Classic black coffee</p>
-                </div>
-                <p class="card__price">$4.50</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/coffee-6-Db3J8o1W.jpg" alt="Latte" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Latte</h2>
-                  <p class="card__description">Espresso coffee with the addition of steamed milk and dense milk foam</p>
-                </div>
-                <p class="card__price">$5.50</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/coffee-7-BtdA6G5u.jpg" alt="Latte macchiato" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Latte macchiato</h2>
-                  <p class="card__description">Espresso with frothed milk and chocolate</p>
-                </div>
-                <p class="card__price">$5.50</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/coffee-8-CBqyok9b.jpg" alt="Coffee with cognac" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Coffee with cognac</h2>
-                  <p class="card__description">Fragrant black coffee with cognac and whipped cream</p>
-                </div>
-                <p class="card__price">$6.50</p>
-              </div>
-            </li>
-          </ul>
+          <ul class="catalog__grid"></ul>
 
-          <ul class="catalog__grid" data-category-grid="tea" hidden>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/tea-1-C9WavPt7.jpg" alt="Moroccan" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Moroccan</h2>
-                  <p class="card__description">Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint</p>
-                </div>
-                <p class="card__price">$4.50</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/tea-2-lQdxdRVp.jpg" alt="Ginger" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Ginger</h2>
-                  <p class="card__description">Original black tea with fresh ginger, lemon and honey</p>
-                </div>
-                <p class="card__price">$5.00</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/tea-3-C1Tt3Exe.jpg" alt="Cranberry" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Cranberry</h2>
-                  <p class="card__description">Invigorating black tea with cranberry and honey</p>
-                </div>
-                <p class="card__price">$5.00</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/tea-4-Cp3gag2R.jpg" alt="Sea buckthorn" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Sea buckthorn</h2>
-                  <p class="card__description">Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon</p>
-                </div>
-                <p class="card__price">$5.50</p>
-              </div>
-            </li>
-          </ul>
-
-          <ul class="catalog__grid" data-category-grid="dessert" hidden>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/dessert-1-CV_6nnuY.jpg" alt="Marble cheesecake" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Marble cheesecake</h2>
-                  <p class="card__description">Philadelphia cheese with lemon zest on a light sponge cake and red currant jam</p>
-                </div>
-                <p class="card__price">$3.50</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/dessert-2-DftBBdhD.jpg" alt="Red velvet" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Red velvet</h2>
-                  <p class="card__description">Layer cake with cream cheese frosting</p>
-                </div>
-                <p class="card__price">$4.00</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/dessert-3-CjSF78ON.jpg" alt="Cheesecakes" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Cheesecakes</h2>
-                  <p class="card__description">Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar</p>
-                </div>
-                <p class="card__price">$4.50</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/dessert-4-GZfXWO4N.jpg" alt="Creme brulee" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Creme brulee</h2>
-                  <p class="card__description">Delicate creamy dessert in a caramel basket with wild berries</p>
-                </div>
-                <p class="card__price">$4.00</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/dessert-5-_YIX83q-.jpg" alt="Pancakes" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Pancakes</h2>
-                  <p class="card__description">Tender pancakes with strawberry jam and fresh strawberries</p>
-                </div>
-                <p class="card__price">$4.50</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/dessert-6-B6CmLSdW.jpg" alt="Honey cake" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Honey cake</h2>
-                  <p class="card__description">Classic honey cake with delicate custard</p>
-                </div>
-                <p class="card__price">$4.50</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/dessert-7-B2GsMFd2.jpg" alt="Chocolate cake" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Chocolate cake</h2>
-                  <p class="card__description">Cake with hot chocolate filling and nuts with dried apricots</p>
-                </div>
-                <p class="card__price">$5.50</p>
-              </div>
-            </li>
-            <li class="card">
-              <img src="/rsschool-landing-page/assets/dessert-8-B_6Kj9Ar.jpg" alt="Black forest" class="card__image">
-              <div class="card__body">
-                <div class="card__info">
-                  <h2 class="card__title">Black forest</h2>
-                  <p class="card__description">A combination of thin sponge cake with cherry jam and light chocolate mousse</p>
-                </div>
-                <p class="card__price">$6.50</p>
-              </div>
-            </li>
-          </ul>
-
-          <button type="button" class="catalog__more" aria-label="Show more">
+          <button type="button" class="catalog__more" aria-label="Show more" hidden>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
               <path d="M17 10a7 7 0 1 1-2.05-4.95" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" />
               <path d="M17 3v4h-4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
@@ -319,6 +116,10 @@
         </div>
       </section>
     </main>
+
+    <div class="modal">
+      <div class="modal__window" role="dialog" aria-modal="true"></div>
+    </div>
 
     <footer class="footer" id="footer">
     <div class="footer__inner">
@@ -371,6 +172,6 @@
       </div>
     </div>
   </footer>
-
+
   </body>
 </html>
