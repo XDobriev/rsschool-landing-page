@@ -29,7 +29,8 @@
   margin: 0 0 40px;
   padding: 0;
 
-  @media (max-width: $breakpoint-mobile) {
+  // the design drops the gap to 8px so the three tabs fit one row inside 348px
+  @media (max-width: $breakpoint-small) {
     gap: 8px;
   }
 }
@@ -52,10 +53,6 @@
 
   &:hover {
     border-color: var(--color-text-accent);
-  }
-
-  @media (max-width: $breakpoint-mobile) {
-    padding-right: 12px;
   }
 }
 
@@ -134,7 +131,6 @@
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
-  border-radius: 20px;
   transition: transform 0.4s ease;
 }
 
@@ -201,14 +197,3 @@
   }
 }
 
-@media (max-width: $breakpoint-mobile) {
-  .tabs {
-    gap: 8px;
-  }
-
-  // the three tabs have to stay on one row inside 348px
-  .tab {
-    gap: 6px;
-    padding-right: 10px;
-  }
-}
