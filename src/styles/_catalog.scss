@@ -71,16 +71,17 @@
 }
 
 .tab--active {
-  background-color: var(--color-bg-container);
-  border-color: var(--color-bg-container);
+  background-color: var(--color-tab-active-bg);
+  border-color: var(--color-tab-active-bg);
   color: var(--color-text-inverse);
 
   .tab__icon {
-    background-color: var(--color-text-inverse);
+    background-color: var(--color-tab-active-icon);
+    color: var(--color-text-primary);
   }
 
   &:hover {
-    border-color: var(--color-bg-container);
+    border-color: var(--color-tab-active-bg);
   }
 }
 

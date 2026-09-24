@@ -23,8 +23,11 @@ $heading-2: clamp(2rem, 0.2861rem + 7.2165vw, 3.75rem);
 
   --color-bg-page: #e1d4c9;
   --color-bg-container: #665f55;
-  --color-bg-surface: #f2ebe4;
-  --color-bg-overlay: rgb(64 63 61 / 60%);
+  --color-bg-modal: #e1d4c9;
+  --color-bg-overlay: rgb(64 63 61 / 80%);
+
+  --color-tab-active-bg: #665f55;
+  --color-tab-active-icon: #e1d4c9;
 
   --color-border-primary: #c1b6ad;
   --color-border-inverse: #665f55;
@@ -39,8 +42,11 @@ $heading-2: clamp(2rem, 0.2861rem + 7.2165vw, 3.75rem);
 
   --color-bg-page: #292826;
   --color-bg-container: #403f3d;
-  --color-bg-surface: #403f3d;
-  --color-bg-overlay: rgb(20 19 18 / 70%);
+  --color-bg-modal: #403f3d;
+  --color-bg-overlay: rgb(41 40 38 / 80%);
+
+  --color-tab-active-bg: #292826;
+  --color-tab-active-icon: #403f3d;
 
   --color-border-primary: #665f55;
   --color-border-inverse: #c1b6ad;

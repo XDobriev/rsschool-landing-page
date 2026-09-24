@@ -49,7 +49,8 @@
   padding: 0;
 }
 
-.nav__item--mobile {
+// only shown inside the burger panel
+.nav__menu {
   display: none;
 }
 
@@ -162,37 +163,36 @@
 .burger {
   display: none;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
-  gap: 5px;
-  width: 28px;
-  height: 20px;
+  // the two bars sit 8px apart from centre to centre
+  gap: 6.5px;
+  width: 44px;
+  height: 44px;
   padding: 0;
   background: none;
-  border: none;
+  border: 1px solid var(--color-border-inverse);
+  border-radius: 100px;
+  color: var(--color-text-primary);
   cursor: pointer;
 
   span {
     display: block;
-    width: 100%;
-    height: 2px;
-    background: var(--color-text-primary);
-    transition:
-      transform 0.3s ease,
-      opacity 0.2s ease;
+    width: 16px;
+    height: 1.5px;
+    border-radius: 1px;
+    background-color: currentColor;
+    transition: transform 0.3s ease;
   }
 }
 
 .burger--open {
   span:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
+    transform: translateY(4px) rotate(45deg);
   }
 
   span:nth-child(2) {
-    opacity: 0;
-  }
-
-  span:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
+    transform: translateY(-4px) rotate(-45deg);
   }
 }
 
@@ -225,11 +225,15 @@
     top: 100%;
     left: 0;
     z-index: -1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
     width: 100%;
     height: calc(100vh - #{$header-height});
-    justify-content: flex-start;
+    overflow-y: auto;
     margin-inline-end: 0;
-    padding: 40px $gutter-mobile;
+    padding: 60px $gutter-desktop;
     background-color: var(--color-bg-page);
     visibility: hidden;
     transform: translateY(-100%);
@@ -245,15 +249,25 @@
 
   .nav__list {
     flex-direction: column;
-    gap: 32px;
+    gap: 60px;
+    width: 100%;
   }
 
-  .nav__item--mobile {
-    display: block;
+  .nav__item {
+    text-align: center;
   }
 
   .nav__link {
-    font-size: 1.25rem;
+    font-size: 2rem;
+    line-height: 1.25;
+  }
+
+  .nav__menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
   }
 
   .menu-link {
@@ -264,8 +278,20 @@
     display: flex;
   }
 
+  .header__actions {
+    gap: 12px;
+  }
+
   .theme-toggle__btn {
     width: 44px;
     height: 44px;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  // the mobile frame keeps the menu at the top instead of centring it
+  .nav {
+    justify-content: flex-start;
+    padding-inline: $gutter-mobile;
   }
 }
