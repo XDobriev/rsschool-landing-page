@@ -46,6 +46,8 @@
   width: 310px;
   height: 310px;
   object-fit: cover;
+  // like the catalog card, the box shows the middle 310px of the 340px photo
+  object-view-box: inset(4.41%);
   border-radius: 40px;
 }
 
@@ -146,6 +148,17 @@
     background-color: var(--color-bg-container);
     border-color: var(--color-bg-container);
     color: var(--color-text-inverse);
+  }
+}
+
+// the design keeps the #665f55 border in the dark window too, and the hover
+// fill has to differ from the window, which is the container colour here
+[data-theme='dark'] .modal__close {
+  border-color: var(--color-border-primary);
+
+  &:hover {
+    background-color: var(--color-bg-page);
+    border-color: var(--color-bg-page);
   }
 }
 
