@@ -20,27 +20,29 @@
 
 .slider {
   position: relative;
-  display: flex;
-  justify-content: center;
+}
+
+.slider__viewport {
+  overflow: hidden;
   // leaves the slide 1152px wide at 1440 and 480px at 768, as in the design
-  padding-inline: 104px;
+  margin-inline: 104px;
 }
 
 .slider__track {
+  display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
+  transition: transform 0.5s ease;
 }
 
 .slider__slide {
+  flex: 0 0 100%;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 16px;
-}
-
-.slider__slide[hidden] {
-  display: none;
 }
 
 .slider__image {
@@ -129,8 +131,12 @@
 .slider__dot {
   width: 40px;
   height: 4px;
+  padding: 0;
+  border: none;
   border-radius: 2px;
   background-color: var(--color-border-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
 
   &--active {
     background-color: var(--color-border-inverse);
@@ -138,13 +144,13 @@
 }
 
 // below this the 104px sides would squeeze the photo, so the slide takes the
-// full width and the controls go, the way the mobile frame draws it
+// full width and the controls sit on it — part 2 needs them at every width
 @media (max-width: 640px) {
-  .slider {
-    padding-inline: 0;
+  .slider__viewport {
+    margin-inline: 0;
   }
 
   .slider__control {
-    display: none;
+    background-color: var(--color-bg-page);
   }
 }

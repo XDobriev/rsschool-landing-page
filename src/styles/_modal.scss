@@ -1,0 +1,189 @@
+@use 'variables' as *;
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: var(--color-bg-overlay);
+  visibility: hidden;
+  opacity: 0;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
+}
+
+// the dark modal window is already the container colour, so its active option
+// takes the page colour instead and the icon circle takes the container one
+[data-theme='dark'] .modal {
+  --color-tab-active-bg: #292826;
+  --color-tab-active-icon: #403f3d;
+}
+
+.modal--open {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal__window {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 800px;
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 16px;
+  border-radius: 40px;
+  background-color: var(--color-bg-modal);
+  text-align: left;
+}
+
+.modal__image {
+  flex-shrink: 0;
+  width: 310px;
+  height: 310px;
+  object-fit: cover;
+  // like the catalog card, the box shows the middle 310px of the 340px photo
+  object-view-box: inset(4.41%);
+  border-radius: 40px;
+}
+
+.modal__content {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-left: 20px;
+}
+
+.modal__heading {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.modal__title {
+  font: 600 1.5rem/1.25 'Inter', sans-serif;
+  margin: 0;
+}
+
+.modal__description {
+  font: 400 1rem/1.5 'Inter', sans-serif;
+  margin: 0;
+}
+
+.modal__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.modal__group-title {
+  font: 400 1rem/1.5 'Inter', sans-serif;
+  margin: 0;
+}
+
+.modal__options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modal__total {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+  font: 600 1.5rem/1.25 'Inter', sans-serif;
+}
+
+.modal__total-label,
+.modal__price {
+  flex: 1;
+}
+
+.modal__price {
+  text-align: right;
+}
+
+.modal__alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  // the 1px rule sits inside the 12px offset the design measures from
+  padding-block: 11px 12px;
+  border-top: 1px solid var(--color-border-primary);
+}
+
+.modal__alert-icon {
+  flex-shrink: 0;
+  display: block;
+}
+
+.modal__note {
+  flex: 1;
+  font: 600 0.625rem/1.4 'Inter', sans-serif;
+  margin: 0;
+}
+
+.modal__close {
+  width: 100%;
+  padding: 9px 77px;
+  border: 1px solid var(--color-border-inverse);
+  border-radius: 100px;
+  background: transparent;
+  color: var(--color-text-primary);
+  font: 600 1rem/1.5 'Inter', sans-serif;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-bg-container);
+    border-color: var(--color-bg-container);
+    color: var(--color-text-inverse);
+  }
+}
+
+// the design keeps the #665f55 border in the dark window too, and the hover
+// fill has to differ from the window, which is the container colour here
+[data-theme='dark'] .modal__close {
+  border-color: var(--color-border-primary);
+
+  &:hover {
+    background-color: var(--color-bg-page);
+    border-color: var(--color-bg-page);
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .modal {
+    padding: $gutter-desktop;
+  }
+}
+
+@media (max-width: $breakpoint-small) {
+  .modal {
+    padding: $gutter-mobile;
+  }
+
+  .modal__window {
+    max-width: 342px;
+    max-height: calc(100vh - 32px);
+  }
+
+  // the mobile frame drops the photo and keeps only the description
+  .modal__image {
+    display: none;
+  }
+
+  .modal__content {
+    padding-left: 0;
+  }
+}
