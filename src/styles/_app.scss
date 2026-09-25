@@ -53,10 +53,15 @@
   border-radius: 999px;
   color: var(--color-text-primary);
   text-decoration: none;
-  transition: background-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 
   &:hover {
-    background-color: var(--color-border-primary);
+    background-color: var(--color-bg-container);
+    border-color: var(--color-bg-container);
+    color: var(--color-text-inverse);
   }
 }
 
@@ -80,7 +85,9 @@
   display: none;
 }
 
-[data-theme='dark'] {
+// the dark theme's icons are the light ones the hover state needs
+[data-theme='dark'],
+.app__button:hover {
   .app__icon--light {
     display: none;
   }
