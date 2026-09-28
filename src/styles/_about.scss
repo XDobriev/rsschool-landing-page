@@ -1,0 +1,83 @@
+@use 'variables' as *;
+
+.about {
+  padding-block: 50px;
+}
+
+.about__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: $heading-2;
+  line-height: 1.25;
+  // Inter 4 from Google Fonts sets this line about 1% wider than the Inter 3
+  // the design uses, enough to push "relax," onto the next line at 1440
+  letter-spacing: -0.005em;
+  margin: 0 0 40px;
+
+  em {
+    font-style: italic;
+    color: var(--color-text-accent);
+  }
+}
+
+.about__images {
+  display: flex;
+  gap: 40px;
+}
+
+.about__column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+}
+
+// the design keeps every photo at 726px square, centred in its box, so a
+// narrower or shorter box shows less of it instead of scaling it down
+.about__image {
+  position: relative;
+  height: 430px;
+  overflow: hidden;
+  border-radius: 20px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 726px;
+    height: 726px;
+    max-width: none;
+    display: block;
+    transform: translate(-50%, -50%);
+    transition: transform 0.4s ease;
+  }
+
+  // the design's hover state shrinks the photo by about 10%, to 660px
+  &:hover img {
+    transform: translate(-50%, -50%) scale(0.909);
+  }
+}
+
+.about__image--tall {
+  height: 590px;
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .about__images {
+    flex-direction: column;
+  }
+
+  .about__image {
+    display: none;
+  }
+
+  .about__image--tall {
+    display: block;
+  }
+
+  // the box is up to 688px wide here, so the photo shrinks only as far as
+  // still covers it
+  .about__image:hover img {
+    transform: translate(-50%, -50%) scale(0.95);
+  }
+}

@@ -1,0 +1,145 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.footer {
+  @include edge-gutter-bottom;
+}
+
+
+.footer__inner {
+  max-width: $container-max-width - ($gutter-desktop * 2);
+  margin-inline: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 100px;
+
+  background-color: var(--color-bg-container);
+  color: var(--color-text-inverse);
+  border-radius: 40px;
+  padding: 100px;
+}
+
+.footer__offer,
+.footer__contacts {
+  flex: 1;
+}
+
+.footer__contacts {
+  align-self: center;
+}
+
+.footer__slogan {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: $heading-2;
+  line-height: 1.25;
+  margin: 0 0 40px;
+
+  em {
+    font-style: italic;
+    color: var(--color-text-accent);
+  }
+}
+
+.socials {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.socials__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-primary);
+  color: var(--color-text-inverse);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+  // the design fills the circle with the page colour and darkens the icon
+  &:hover {
+    background-color: var(--color-bg-page);
+    border-color: var(--color-bg-page);
+    color: var(--color-text-primary);
+  }
+}
+
+.footer__title {
+  font: 600 1.5rem/1.25 'Inter', sans-serif;
+  margin: 0 0 40px;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  // each row is only as wide as its content, so the hover line is too
+  align-items: flex-start;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.contacts-list__link,
+.contacts-list__item {
+  position: relative;
+  display: flex;
+  // the icon sits at the top of the text line in the design
+  align-items: flex-start;
+  gap: 8px;
+  // the design gives each row 24px of content and 4px of room underneath
+  padding-bottom: 4px;
+  color: var(--color-text-inverse);
+  text-decoration: none;
+  font: 600 1rem/1.5 'Inter', sans-serif;
+}
+
+.contacts-list__icon {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+}
+
+// the design's hover keeps the colour and draws a 2px line under the row
+.contacts-list__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.2s ease;
+}
+
+.contacts-list__link:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .footer__inner {
+    flex-direction: column;
+    gap: 100px;
+    padding: 100px 60px;
+  }
+
+  .footer__contacts {
+    align-self: stretch;
+  }
+}
+
+@media (max-width: $breakpoint-mobile) {
+  .footer__inner {
+    gap: 40px;
+    padding: 60px 16px;
+  }
+}

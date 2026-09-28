@@ -1,0 +1,210 @@
+@use 'variables' as *;
+
+.catalog {
+  // the section opens the page, so the gap above it comes from the header
+  padding-block: 0 50px;
+  text-align: center;
+}
+
+.catalog__title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  font-size: $heading-2;
+  line-height: 1.25;
+  max-width: 800px;
+  margin: 0 auto 40px;
+
+  em {
+    font-style: italic;
+    color: var(--color-text-accent);
+  }
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0;
+
+  // the design drops the gap to 8px so the three tabs fit one row inside 348px
+  @media (max-width: $breakpoint-small) {
+    gap: 8px;
+  }
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px 7px 7px;
+  border-radius: 100px;
+  border: 1px solid var(--color-border-primary);
+  background: transparent;
+  color: var(--color-text-primary);
+  font: 600 1rem/1.5 'Inter', sans-serif;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+}
+
+.tab__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--color-border-primary);
+  font-size: 1rem;
+}
+
+// the design draws the hover state exactly like the active one
+.tab--active,
+.tab:hover {
+  background-color: var(--color-bg-container);
+  border-color: var(--color-bg-container);
+  color: var(--color-text-inverse);
+
+  // the page colour in both themes: light in the light one, dark in the dark
+  .tab__icon {
+    background-color: var(--color-bg-page);
+  }
+}
+
+// the design lays the cards out four across; the columns may give up a few
+// pixels of the 310px card so that four still fit once a scrollbar is there
+.catalog__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 310px));
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  @media (max-width: 1215px) {
+    grid-template-columns: repeat(3, minmax(0, 310px));
+  }
+
+  @media (max-width: 924px) {
+    grid-template-columns: repeat(2, minmax(0, 310px));
+  }
+
+  @media (max-width: 634px) {
+    grid-template-columns: minmax(0, 310px);
+  }
+
+  &[hidden] {
+    display: none;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  // every card is 506px tall in the design, whatever the length of its text
+  min-height: 506px;
+  border: 1px solid var(--color-border-primary);
+  border-radius: 40px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-color: var(--color-text-accent);
+  }
+
+  // the design's hover state shows the whole photo, about 10% smaller
+  &:hover .card__image {
+    object-view-box: inset(0);
+  }
+}
+
+// the photo box covers the card's border and is rounded on every corner; at
+// rest it shows the middle 310px of the 340px photo
+.card__image {
+  width: calc(100% + 2px);
+  margin: -1px -1px 0;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  object-view-box: inset(4.41%);
+  border-radius: 40px;
+  display: block;
+  transition: object-view-box 0.4s ease;
+}
+
+.card__body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12px;
+  // the design's border lies inside the card, over the text block's padding
+  margin-bottom: -1px;
+  padding: 20px;
+  text-align: left;
+}
+
+.card__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card__title {
+  font: 600 1.5rem/1.25 'Inter', sans-serif;
+  margin: 0;
+}
+
+.card__description {
+  font: 400 1rem/1.5 'Inter', sans-serif;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.card__price {
+  font: 600 1.5rem/1.25 'Inter', sans-serif;
+  margin: 0;
+}
+
+// the design shows every card of a category on desktop; only the narrower
+// layouts start with four and offer the rest behind the button
+.catalog__more {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  margin: 40px auto 0;
+  border-radius: 50%;
+  border: 1px solid var(--color-border-inverse);
+  background: transparent;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+
+  &:hover {
+    background-color: var(--color-bg-container);
+    border-color: var(--color-bg-container);
+    color: var(--color-text-inverse);
+  }
+}
+
+@media (max-width: $breakpoint-tablet) {
+  .catalog__grid .card:nth-child(n + 5) {
+    display: none;
+  }
+
+  .catalog__more {
+    display: flex;
+  }
+}
+
