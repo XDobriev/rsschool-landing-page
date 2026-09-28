@@ -50,7 +50,6 @@
     background-color 0.2s ease,
     border-color 0.2s ease,
     color 0.2s ease;
-
 }
 
 .tab__icon {
@@ -67,13 +66,13 @@
 // the design draws the hover state exactly like the active one
 .tab--active,
 .tab:hover {
-  background-color: var(--color-bg-container);
-  border-color: var(--color-bg-container);
+  background-color: var(--color-tab-active-bg);
+  border-color: var(--color-tab-active-bg);
   color: var(--color-text-inverse);
 
-  // the page colour in both themes: light in the light one, dark in the dark
   .tab__icon {
-    background-color: var(--color-bg-page);
+    background-color: var(--color-tab-active-icon);
+    color: var(--color-text-primary);
   }
 }
 
@@ -113,10 +112,16 @@
   border: 1px solid var(--color-border-primary);
   border-radius: 40px;
   overflow: hidden;
+  cursor: pointer;
   transition: border-color 0.2s ease;
 
   &:hover {
     border-color: var(--color-text-accent);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--color-text-accent);
+    outline-offset: 2px;
   }
 
   // the design's hover state shows the whole photo, about 10% smaller
@@ -196,13 +201,14 @@
     border-color: var(--color-bg-container);
     color: var(--color-text-inverse);
   }
+
+  &[hidden] {
+    display: none;
+  }
 }
 
 @media (max-width: $breakpoint-tablet) {
-  .catalog__grid .card:nth-child(n + 5) {
-    display: none;
-  }
-
+  // the script decides how many cards to render and when the button is needed
   .catalog__more {
     display: flex;
   }

@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "deploy": "vite build && gh-pages -d dist --add"
+    "deploy": "vite build && gh-pages -d dist --add",
+    "deploy:part-2": "vite build --base=/rsschool-landing-page/part-2/ && gh-pages -d dist -e part-2"
   },
   "devDependencies": {
     "gh-pages": "^6.3.0",
