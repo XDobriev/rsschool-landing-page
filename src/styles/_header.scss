@@ -259,6 +259,11 @@
     transform: translateY(0);
   }
 
+  // crossing the breakpoint must not play the slide-out over the page
+  .nav--resizing {
+    transition: none;
+  }
+
   .nav__list {
     flex-direction: column;
     gap: 60px;

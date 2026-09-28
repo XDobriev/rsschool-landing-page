@@ -49,7 +49,13 @@ document.addEventListener('keydown', (event) => {
   }
 });
 
+let resizeTimer;
+
 window.addEventListener('resize', () => {
+  nav.classList.add('nav--resizing');
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(() => nav.classList.remove('nav--resizing'), 100);
+
   if (window.innerWidth > TABLET_WIDTH) {
     closeMenu();
   }

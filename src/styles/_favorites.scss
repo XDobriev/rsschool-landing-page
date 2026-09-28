@@ -75,8 +75,10 @@
   margin: 0;
 }
 
+// the moving track would otherwise sit above the arrows and take their clicks
 .slider__control {
   position: absolute;
+  z-index: 1;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
